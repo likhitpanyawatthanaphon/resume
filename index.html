@@ -2,472 +2,1073 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Resume | ว่าที่ร้อยตรี ธนพนธ์ ลิขิตปัญญาวัฒน์</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="เว็บไซต์เรซูเม่สมัครงานของ ว่าที่ร้อยตรี ธนพนธ์ ลิขิตปัญญาวัฒน์"
+    content="เว็บไซต์ Resume และ Portfolio สำหรับสมัครงาน"
   >
+
+  <meta name="theme-color" content="#0b3b66">
+
+  <title>[ชื่อ-นามสกุล] | Resume & Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="topbar">
-  <div class="container nav">
+  <!-- =========================
+       HEADER / NAVIGATION
+  ========================== -->
 
-    <div class="brand">
-      THANAPHON<span>.</span>
-    </div>
+  <header class="site-header">
 
-    <nav>
-      <a href="#about">เกี่ยวกับผม</a>
-      <a href="#experience">ประสบการณ์</a>
-      <a href="#skills">ทักษะ</a>
-      <a href="#contact">ติดต่อ</a>
-    </nav>
+    <nav class="nav container" aria-label="เมนูหลัก">
 
-    <button class="menu" aria-label="เปิดเมนู">
-      ☰
-    </button>
+      <a class="brand" href="#home">
+        RESUME<span>.</span>
+      </a>
 
-  </div>
-</header>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
+      <div class="nav-links" id="navLinks">
 
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="about">
-
-  <div class="container hero-grid">
-
-    <div class="hero-text">
-
-      <p class="eyebrow">
-        PROFESSIONAL RESUME
-      </p>
-
-      <h1>
-        ว่าที่ร้อยตรี<br>
-        <strong>ธนพนธ์ ลิขิตปัญญาวัฒน์</strong>
-      </h1>
-
-      <p class="lead">
-        ผู้มีประสบการณ์ด้านความปลอดภัย การผลิต
-        และการปฏิบัติงานในองค์กรขนาดใหญ่
-        พร้อมนำประสบการณ์มาสร้างคุณค่าให้กับองค์กร
-      </p>
-
-      <div class="actions">
-
-        <a class="btn primary" href="#contact">
-          ติดต่อสมัครงาน
+        <a href="#about">
+          เกี่ยวกับฉัน
         </a>
 
-        <button
-          class="btn secondary"
-          onclick="window.print()">
-          พิมพ์ / บันทึกเป็น PDF
-        </button>
-
-      </div>
-
-      <div class="quick">
-
-        <div>
-          <span>สายงาน</span>
-          <b>จป. / ความปลอดภัย</b>
-        </div>
-
-        <div>
-          <span>ประสบการณ์</span>
-          <b>ความปลอดภัย • ผลิต • ปฏิบัติการ</b>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="portrait-wrap">
-
-      <div class="portrait-card">
-
-        <img
-          src="profile.png"
-          alt="รูปโปรไฟล์ ธนพนธ์ ลิขิตปัญญาวัฒน์">
-
-      </div>
-
-      <div class="badge">
-        พร้อมเริ่มงานและเรียนรู้สิ่งใหม่
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section class="section" id="experience">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <p class="eyebrow">
-        WORK EXPERIENCE
-      </p>
-
-      <h2>
-        ประสบการณ์ทำงาน
-      </h2>
-
-    </div>
-
-
-    <div class="timeline">
-
-
-      <article class="job">
-
-        <div class="dot"></div>
-
-        <div>
-
-          <span class="period">
-            ประสบการณ์ทำงาน
-          </span>
-
-          <h3>
-            เจ้าหน้าที่ความปลอดภัย (จป.)
-          </h3>
-
-          <h4>
-            บริษัท ปูนซีเมนต์นครหลวง จำกัด (มหาชน)
-          </h4>
-
-          <p>
-            ดูแลงานด้านความปลอดภัยในการทำงาน
-            สนับสนุนการป้องกันอุบัติเหตุ
-            การปฏิบัติตามมาตรการความปลอดภัย
-            และการทำงานร่วมกับหน่วยงานต่าง ๆ
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="job">
-
-        <div class="dot"></div>
-
-        <div>
-
-          <span class="period">
-            ประสบการณ์ทำงาน
-          </span>
-
-          <h3>
-            หัวหน้าฝ่ายผลิต
-          </h3>
-
-          <h4>
-            บริษัท เครือเจริญโภคภัณฑ์
-          </h4>
-
-          <p>
-            ประสานงานและควบคุมการดำเนินงานฝ่ายผลิต
-            ดูแลบุคลากรและกระบวนการทำงาน
-            ให้เป็นไปตามเป้าหมายขององค์กร
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="job">
-
-        <div class="dot"></div>
-
-        <div>
-
-          <span class="period">
-            ประสบการณ์ทำงาน
-          </span>
-
-          <h3>
-            พนักงานปฏิบัติการ
-          </h3>
-
-          <h4>
-            บริษัท ปตท. น้ำมันและการค้าปลีก จำกัด (มหาชน) — OR
-          </h4>
-
-          <p>
-            ปฏิบัติงานตามมาตรฐานขององค์กร
-            ให้บริการและสนับสนุนการดำเนินงานประจำวัน
-            อย่างมีประสิทธิภาพ
-          </p>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section class="section soft" id="skills">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <p class="eyebrow">
-        SKILLS
-      </p>
-
-      <h2>
-        ทักษะและจุดแข็ง
-      </h2>
-
-    </div>
-
-
-    <div class="cards">
-
-
-      <div class="card">
-
-        <span class="icon">🛡️</span>
-
-        <h3>
-          ความปลอดภัย
-        </h3>
-
-        <p>
-          งานด้านความปลอดภัย
-          การป้องกันความเสี่ยง
-          และการทำงานตามมาตรฐาน
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <span class="icon">⚙️</span>
-
-        <h3>
-          การผลิต
-        </h3>
-
-        <p>
-          ประสบการณ์ควบคุมและประสานงาน
-          กระบวนการผลิตและทีมงาน
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <span class="icon">🤝</span>
-
-        <h3>
-          การทำงานเป็นทีม
-        </h3>
-
-        <p>
-          สื่อสารและประสานงานกับบุคลากร
-          หลายฝ่ายเพื่อให้บรรลุเป้าหมาย
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <span class="icon">📈</span>
-
-        <h3>
-          พัฒนาอย่างต่อเนื่อง
-        </h3>
-
-        <p>
-          พร้อมเรียนรู้เทคโนโลยี
-          และแนวทางใหม่ ๆ
-          เพื่อเพิ่มประสิทธิภาพการทำงาน
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- EDUCATION -->
-
-    <div class="education">
-
-      <div>
-
-        <p class="eyebrow">
-          EDUCATION
-        </p>
-
-        <h2>
+        <a href="#education">
           การศึกษา
-        </h2>
+        </a>
+
+        <a href="#experience">
+          ประสบการณ์
+        </a>
+
+        <a href="#skills">
+          ทักษะ
+        </a>
+
+        <a href="#projects">
+          ผลงาน
+        </a>
+
+        <a href="#contact" class="nav-cta">
+          ติดต่อ
+        </a>
 
       </div>
 
+    </nav>
 
-      <div class="edu-box">
+  </header>
 
-        <h3>
-          ปริญญาตรี
-        </h3>
 
-        <p>
-          กรุณาแก้ไขชื่อคณะ / สาขา /
-          มหาวิทยาลัยให้ตรงกับข้อมูลจริง
-        </p>
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+
+      <div class="container hero-grid">
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-copy reveal">
+
+          <p class="eyebrow">
+            OPEN TO WORK • AVAILABLE FOR INTERVIEW
+          </p>
+
+          <h1>
+            [ชื่อ-นามสกุล]
+          </h1>
+
+          <h2>
+            [ตำแหน่งงานที่ต้องการ]
+          </h2>
+
+          <p class="hero-text">
+            ผู้สมัครงานที่มีความมุ่งมั่น พร้อมเรียนรู้สิ่งใหม่
+            ทำงานเป็นทีม และนำทักษะด้าน [ทักษะหลัก]
+            มาสร้างผลงานที่มีคุณค่าให้กับองค์กร
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="btn btn-primary"
+              href="#contact"
+            >
+              ติดต่อเพื่อสมัครงาน
+            </a>
+
+
+            <button
+              class="btn btn-outline"
+              id="printResume"
+            >
+              ดาวน์โหลด / พิมพ์ Resume
+            </button>
+
+          </div>
+
+
+          <div class="quick-info">
+
+            <span>
+              📍 [จังหวัด, ประเทศ]
+            </span>
+
+            <span>
+              ✉ [email@example.com]
+            </span>
+
+            <span>
+              ☎ [08x-xxx-xxxx]
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="hero-photo-wrap reveal">
+
+          <div class="photo-frame">
+
+            <div class="gold-ring"></div>
+
+            <img
+              src="assets/profile.png"
+              alt="รูปโปรไฟล์ของผู้สมัครงาน"
+            >
+
+          </div>
+
+
+          <div class="photo-badge">
+
+            <strong>
+              [ปี]
+            </strong>
+
+            <span>
+              พร้อมเริ่มงาน
+            </span>
+
+          </div>
+
+        </div>
 
       </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT ME
+    ========================== -->
+
+    <section class="section" id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="eyebrow">
+            ABOUT ME
+          </p>
+
+          <h2>
+            เกี่ยวกับฉัน
+          </h2>
+
+          <p>
+            สรุปตัวตน ความสนใจ และจุดแข็งของคุณ
+            ในแบบที่ HR อ่านแล้วเข้าใจได้ทันที
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+          <!-- CARD 1 -->
+
+          <article class="glass-card reveal">
+
+            <span class="card-icon">
+              ✦
+            </span>
+
+            <h3>
+              Professional Summary
+            </h3>
+
+            <p>
+              [เขียนสรุปประสบการณ์หรือความสามารถประมาณ
+              3–5 บรรทัด]
+
+              เช่น มีความสนใจด้านเทคโนโลยี
+              การพัฒนาเว็บไซต์ การวิเคราะห์ข้อมูล
+              หรือสายงานที่คุณต้องการสมัคร
+              พร้อมเปิดรับความท้าทายใหม่ ๆ
+            </p>
+
+          </article>
+
+
+          <!-- CARD 2 -->
+
+          <article class="glass-card reveal">
+
+            <span class="card-icon">
+              ◎
+            </span>
+
+            <h3>
+              จุดแข็ง
+            </h3>
+
+            <ul class="check-list">
+
+              <li>
+                รับผิดชอบงานและตรงต่อเวลา
+              </li>
+
+              <li>
+                เรียนรู้เทคโนโลยีและเครื่องมือใหม่ได้รวดเร็ว
+              </li>
+
+              <li>
+                สื่อสารและทำงานร่วมกับผู้อื่นได้ดี
+              </li>
+
+              <li>
+                แก้ปัญหาอย่างเป็นระบบ
+              </li>
+
+            </ul>
+
+          </article>
+
+
+          <!-- CARD 3 -->
+
+          <article class="glass-card reveal">
+
+            <span class="card-icon">
+              ↗
+            </span>
+
+            <h3>
+              เป้าหมายการทำงาน
+            </h3>
+
+            <p>
+              ต้องการร่วมงานกับองค์กรที่เปิดโอกาส
+              ให้พัฒนาศักยภาพ และสามารถนำความรู้
+              ไปสร้างผลงานที่วัดผลได้
+              พร้อมเติบโตไปกับทีมในระยะยาว
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section
+      class="section section-dark"
+      id="education"
+    >
+
+      <div class="container">
+
+        <div class="section-heading light reveal">
+
+          <p class="eyebrow">
+            EDUCATION
+          </p>
+
+          <h2>
+            การศึกษา
+          </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <!-- EDUCATION 1 -->
+
+          <article class="timeline-item reveal">
+
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-card">
+
+              <div class="timeline-top">
+
+                <span class="date">
+                  [20XX – 20XX]
+                </span>
+
+                <span class="tag">
+                  ปริญญาตรี
+                </span>
+
+              </div>
+
+              <h3>
+                [ชื่อมหาวิทยาลัย]
+              </h3>
+
+              <p>
+                [คณะ / สาขาวิชา]
+              </p>
+
+              <p class="muted">
+                GPA: [x.xx]
+                •
+                [เกียรติบัตร / รางวัล / กิจกรรมเด่น]
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- EDUCATION 2 -->
+
+          <article class="timeline-item reveal">
+
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-card">
+
+              <div class="timeline-top">
+
+                <span class="date">
+                  [20XX – 20XX]
+                </span>
+
+                <span class="tag">
+                  มัธยมศึกษา
+                </span>
+
+              </div>
+
+              <h3>
+                [ชื่อโรงเรียน]
+              </h3>
+
+              <p>
+                [สายการเรียน]
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section
+      class="section"
+      id="experience"
+    >
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="eyebrow">
+            EXPERIENCE
+          </p>
+
+          <h2>
+            ประสบการณ์
+          </h2>
+
+          <p>
+            ใส่ประสบการณ์ทำงาน ฝึกงาน ฟรีแลนซ์
+            หรือกิจกรรมที่แสดงความสามารถของคุณ
+          </p>
+
+        </div>
+
+
+        <div class="experience-list">
+
+
+          <!-- EXPERIENCE 1 -->
+
+          <article class="experience-card reveal">
+
+            <div class="experience-number">
+              01
+            </div>
+
+            <div>
+
+              <div class="experience-meta">
+                [20XX – ปัจจุบัน]
+                •
+                [บริษัท / องค์กร]
+              </div>
+
+              <h3>
+                [ตำแหน่งงาน]
+              </h3>
+
+              <p>
+                รับผิดชอบ [หน้าที่หลัก]
+                และร่วมทำงานกับทีมในด้าน
+                [รายละเอียดงาน]
+              </p>
+
+              <ul class="bullet-list">
+
+                <li>
+                  [ผลงานหรือผลลัพธ์ที่วัดได้
+                  เช่น ลดเวลาทำงานลง 20%]
+                </li>
+
+                <li>
+                  [ระบบ/โครงการที่รับผิดชอบ]
+                </li>
+
+                <li>
+                  [เครื่องมือหรือเทคโนโลยีที่ใช้]
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- EXPERIENCE 2 -->
+
+          <article class="experience-card reveal">
+
+            <div class="experience-number">
+              02
+            </div>
+
+            <div>
+
+              <div class="experience-meta">
+                [20XX – 20XX]
+                •
+                [บริษัท / องค์กร]
+              </div>
+
+              <h3>
+                [ตำแหน่ง / ฝึกงาน]
+              </h3>
+
+              <p>
+                ทำงานด้าน [หน้าที่]
+                และพัฒนาทักษะ
+                [ทักษะสำคัญ]
+              </p>
+
+              <ul class="bullet-list">
+
+                <li>
+                  [ผลงานเด่น]
+                </li>
+
+                <li>
+                  [ความรับผิดชอบ]
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section
+      class="section section-soft"
+      id="skills"
+    >
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="eyebrow">
+            SKILLS
+          </p>
+
+          <h2>
+            ทักษะ
+          </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <!-- TECHNICAL -->
+
+          <article class="skill-panel reveal">
+
+            <h3>
+              Technical Skills
+            </h3>
+
+            <div class="skill-tags">
+
+              <span>
+                HTML5
+              </span>
+
+              <span>
+                CSS3
+              </span>
+
+              <span>
+                JavaScript
+              </span>
+
+              <span>
+                Git / GitHub
+              </span>
+
+              <span>
+                Microsoft Office
+              </span>
+
+              <span>
+                [ทักษะอื่น]
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- SOFT SKILLS -->
+
+          <article class="skill-panel reveal">
+
+            <h3>
+              Soft Skills
+            </h3>
+
+            <div class="skill-tags">
+
+              <span>
+                Communication
+              </span>
+
+              <span>
+                Teamwork
+              </span>
+
+              <span>
+                Problem Solving
+              </span>
+
+              <span>
+                Time Management
+              </span>
+
+              <span>
+                Adaptability
+              </span>
+
+              <span>
+                Leadership
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- LANGUAGES -->
+
+          <article class="skill-panel reveal">
+
+            <h3>
+              Languages
+            </h3>
+
+
+            <div class="language-row">
+
+              <span>
+                ไทย
+              </span>
+
+              <strong>
+                เจ้าของภาษา
+              </strong>
+
+            </div>
+
+
+            <div class="language-row">
+
+              <span>
+                English
+              </span>
+
+              <strong>
+                [ระดับภาษา]
+              </strong>
+
+            </div>
+
+
+            <div class="language-row">
+
+              <span>
+                [ภาษาอื่น]
+              </span>
+
+              <strong>
+                [ระดับภาษา]
+              </strong>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section
+      class="section"
+      id="projects"
+    >
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="eyebrow">
+            PORTFOLIO
+          </p>
+
+          <h2>
+            ผลงานเด่น
+          </h2>
+
+          <p>
+            แสดงโครงการที่ช่วยให้ HR เห็นทักษะจริงของคุณ
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 1 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-top">
+
+              <span>
+                PROJECT 01
+              </span>
+
+              <span>
+                WEB
+              </span>
+
+            </div>
+
+            <h3>
+              [ชื่อโปรเจกต์]
+            </h3>
+
+            <p>
+              อธิบายสั้น ๆ ว่าโปรเจกต์นี้ทำอะไร
+              แก้ปัญหาอะไร และคุณรับผิดชอบส่วนไหน
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>
+                HTML
+              </span>
+
+              <span>
+                CSS
+              </span>
+
+              <span>
+                JS
+              </span>
+
+            </div>
+
+
+            <a
+              href="#"
+              class="text-link"
+            >
+              ดูรายละเอียด →
+            </a>
+
+          </article>
+
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-top">
+
+              <span>
+                PROJECT 02
+              </span>
+
+              <span>
+                DATA
+              </span>
+
+            </div>
+
+            <h3>
+              [ชื่อโปรเจกต์]
+            </h3>
+
+            <p>
+              ใส่รายละเอียดผลงาน เช่น Dashboard,
+              Data Analysis, Automation
+              หรือระบบภายใน
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>
+                Excel
+              </span>
+
+              <span>
+                Power BI
+              </span>
+
+              <span>
+                [Tool]
+              </span>
+
+            </div>
+
+
+            <a
+              href="#"
+              class="text-link"
+            >
+              ดูรายละเอียด →
+            </a>
+
+          </article>
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card reveal">
+
+            <div class="project-top">
+
+              <span>
+                PROJECT 03
+              </span>
+
+              <span>
+                OTHER
+              </span>
+
+            </div>
+
+            <h3>
+              [ชื่อผลงาน / กิจกรรม]
+            </h3>
+
+            <p>
+              ใส่รางวัล กิจกรรมมหาวิทยาลัย
+              งานอาสา หรือผลงานที่แสดงถึง
+              ความสามารถของคุณ
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>
+                Teamwork
+              </span>
+
+              <span>
+                Planning
+              </span>
+
+              <span>
+                Result
+              </span>
+
+            </div>
+
+
+            <a
+              href="#"
+              class="text-link"
+            >
+              ดูรายละเอียด →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+      class="contact-section"
+      id="contact"
+    >
+
+      <div class="container contact-grid">
+
+
+        <!-- CONTACT TEXT -->
+
+        <div class="reveal">
+
+          <p class="eyebrow">
+            LET'S CONNECT
+          </p>
+
+          <h2>
+            พร้อมสำหรับโอกาสใหม่
+          </h2>
+
+          <p>
+            หากคุณกำลังมองหาผู้สมัครที่พร้อมเรียนรู้
+            และลงมือทำ ติดต่อผม/ฉันได้ตามช่องทางด้านล่าง
+          </p>
+
+        </div>
+
+
+        <!-- CONTACT LINKS -->
+
+        <div class="contact-card reveal">
+
+
+          <!-- EMAIL -->
+
+          <a
+            href="mailto:email@example.com"
+          >
+
+            <span>
+              ✉
+            </span>
+
+            <div>
+
+              <small>
+                Email
+              </small>
+
+              <strong>
+                email@example.com
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- PHONE -->
+
+          <a
+            href="tel:+66800000000"
+          >
+
+            <span>
+              ☎
+            </span>
+
+            <div>
+
+              <small>
+                Phone
+              </small>
+
+              <strong>
+                08x-xxx-xxxx
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- LINKEDIN -->
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <span>
+              in
+            </span>
+
+            <div>
+
+              <small>
+                LinkedIn
+              </small>
+
+              <strong>
+                linkedin.com/in/yourname
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- GITHUB -->
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <span>
+              ⌘
+            </span>
+
+            <div>
+
+              <small>
+                GitHub
+              </small>
+
+              <strong>
+                github.com/yourusername
+              </strong>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        ©
+        <span id="year"></span>
+        [ชื่อ-นามสกุล].
+        All rights reserved.
+      </span>
+
+      <a href="#home">
+        กลับด้านบน ↑
+      </a>
 
     </div>
 
-  </div>
-
-</section>
+  </footer>
 
 
-<!-- CONTACT -->
+  <!-- JAVASCRIPT -->
 
-<section class="section contact" id="contact">
-
-  <div class="container contact-box">
-
-    <div>
-
-      <p class="eyebrow">
-        CONTACT
-      </p>
-
-      <h2>
-        สนใจร่วมงานกันไหม?
-      </h2>
-
-      <p>
-        สามารถติดต่อเพื่อสอบถามข้อมูล
-        หรือพิจารณาร่วมงานได้ตามช่องทางด้านล่าง
-      </p>
-
-    </div>
-
-
-    <div class="contact-list">
-
-      <div>
-
-        <span>
-          โทรศัพท์
-        </span>
-
-        <b>
-          ใส่เบอร์โทรศัพท์ของคุณ
-        </b>
-
-      </div>
-
-
-      <div>
-
-        <span>
-          อีเมล
-        </span>
-
-        <b>
-          ใส่อีเมลของคุณ
-        </b>
-
-      </div>
-
-
-      <div>
-
-        <span>
-          พื้นที่ทำงาน
-        </span>
-
-        <b>
-          สระบุรี / จังหวัดที่ต้องการ
-        </b>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-  <div class="container footer-inner">
-
-    <span>
-      © <span id="year"></span>
-      Thanaphon Likhitpanyawat
-    </span>
-
-    <span>
-      Professional Resume Website
-    </span>
-
-  </div>
-
-</footer>
-
-
-<script>
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-
-document
-  .querySelector(".menu")
-  .addEventListener("click", function () {
-
-    document
-      .querySelector("nav")
-      .classList.toggle("open");
-
-  });
-
-</script>
+  <script src="script.js"></script>
 
 </body>
 </html>
