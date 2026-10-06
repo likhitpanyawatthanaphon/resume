@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,27 +12,38 @@
 
     <meta
         name="description"
-        content="Professional Resume and Portfolio"
+        content="Modern Futuristic Resume Portfolio"
     >
 
-    <meta
-        name="author"
-        content="ชื่อ นามสกุล"
-    >
+    <title>
+        YOUR NAME — Digital Resume
+    </title>
 
-    <title>ชื่อ นามสกุล | Professional Resume</title>
-
-    <!-- Google Fonts -->
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap"
         rel="stylesheet"
     >
 
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
@@ -40,57 +52,82 @@
 
 
 <!-- =====================================================
-     NAVIGATION
+     BACKGROUND EFFECT
+===================================================== -->
+
+<div class="background-grid"></div>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div
+    class="cursor-glow"
+    id="cursorGlow"
+></div>
+
+
+
+<!-- =====================================================
+     NAVBAR
 ===================================================== -->
 
 <header class="navbar">
 
-    <div class="container nav-container">
+    <div class="nav-inner">
 
-        <a href="#home" class="logo">
-            MY<span>CV</span>
+
+        <a
+            href="#home"
+            class="brand"
+        >
+
+            <span class="brand-symbol">
+                &lt;/&gt;
+            </span>
+
+            <span>
+                YOUR<span class="cyan">CV</span>
+            </span>
+
         </a>
 
 
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="เปิดเมนู"
-        >
-            ☰
-        </button>
+        <nav id="navMenu">
 
-
-        <nav id="navigation">
+            <a href="#home">
+                HOME
+            </a>
 
             <a href="#about">
-                About
+                ABOUT
             </a>
 
             <a href="#experience">
-                Experience
-            </a>
-
-            <a href="#education">
-                Education
+                EXPERIENCE
             </a>
 
             <a href="#skills">
-                Skills
+                SKILLS
             </a>
 
             <a href="#projects">
-                Portfolio
+                PROJECTS
             </a>
 
-            <a
-                href="#contact"
-                class="nav-contact"
-            >
-                Contact
+            <a href="#contact">
+                CONTACT
             </a>
 
         </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
     </div>
 
@@ -102,80 +139,143 @@
      HERO
 ===================================================== -->
 
-<section class="hero" id="home">
-
-    <div class="container hero-container">
+<main>
 
 
-        <div class="hero-content">
+<section
+    class="hero"
+    id="home"
+>
 
-            <div class="hero-label">
 
-                <span></span>
+    <div class="hero-container">
 
-                AVAILABLE FOR OPPORTUNITIES
+
+        <!-- LEFT -->
+
+        <div
+            class="hero-content reveal"
+        >
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                AVAILABLE FOR WORK
+
+            </div>
+
+
+            <div class="hero-code">
+
+                &lt;hello_world /&gt;
 
             </div>
 
 
             <h1>
 
-                ชื่อ
+                Hi, I'm
 
-                <strong>
-                    นามสกุล
-                </strong>
+                <span class="gradient-text">
+                    YOUR NAME
+                </span>
 
             </h1>
 
 
-            <h2>
-                PROFESSIONAL POSITION
-            </h2>
+            <div class="typing-wrapper">
+
+                <span>
+                    I am a
+                </span>
+
+                <span
+                    id="typingText"
+                    class="typing"
+                >
+                    Software Developer
+                </span>
+
+                <span class="cursor">
+                    |
+                </span>
+
+            </div>
 
 
             <p class="hero-description">
 
-                ผู้สมัครงานที่มีความมุ่งมั่น มีความรับผิดชอบ
-                พร้อมเรียนรู้สิ่งใหม่ และสามารถนำความรู้
-                และทักษะมาสร้างคุณค่าให้กับองค์กร
+                นักพัฒนาที่หลงใหลในเทคโนโลยี
+                การออกแบบระบบ และการสร้าง Digital Experience
+                ที่ทันสมัย ใช้งานง่าย และสร้างคุณค่าให้กับผู้ใช้งาน
 
             </p>
 
 
             <div class="hero-buttons">
 
+
                 <a
-                    href="#contact"
-                    class="button primary"
+                    href="#projects"
+                    class="btn btn-primary"
                 >
-                    ติดต่อฉัน
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    VIEW PROJECTS
+
                 </a>
 
 
-                <button
-                    onclick="window.print()"
-                    class="button secondary"
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
                 >
-                    ดาวน์โหลด Resume
-                </button>
+
+                    CONTACT ME
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
 
             </div>
 
 
-            <div class="hero-contact">
+            <div class="socials">
 
-                <span>
-                    📍 Bangkok, Thailand
-                </span>
 
-                <span>
-                    ✉ yourname@email.com
-                </span>
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    aria-label="GitHub"
+                >
 
-                <span>
-                    ☎ 08X-XXX-XXXX
-                </span>
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a
+                    href="https://linkedin.com/"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                >
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+
+                <a
+                    href="mailto:your@email.com"
+                    aria-label="Email"
+                >
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
             </div>
 
@@ -183,29 +283,147 @@
 
 
 
-        <!-- PHOTO PLACEHOLDER -->
+        <!-- RIGHT -->
 
-        <div class="hero-photo">
+        <div
+            class="hero-visual reveal"
+        >
 
-            <div class="photo-placeholder">
 
-                <div class="photo-icon">
-                    +
+            <div class="profile-card">
+
+
+                <div class="card-header">
+
+                    <span>
+                        DIGITAL ID
+                    </span>
+
+                    <span>
+                        #2026
+                    </span>
+
                 </div>
 
-                <p>
-                    YOUR PHOTO
-                </p>
 
-                <small>
-                    เพิ่มรูปของคุณภายหลัง
-                </small>
+                <div class="photo-frame">
+
+
+                    <!--
+                        ใส่รูปของคุณตรงนี้ภายหลัง
+
+                        assets/profile.jpg
+                    -->
+
+                    <div
+                        class="photo-placeholder"
+                        id="photoPlaceholder"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span>
+                            YOUR PHOTO
+                        </span>
+
+                    </div>
+
+
+                    <!--
+
+                    <img
+                        src="assets/profile.jpg"
+                        alt="Your Name"
+                    >
+
+                    -->
+
+
+                    <div class="scan-line"></div>
+
+                </div>
+
+
+                <div class="profile-info">
+
+
+                    <div>
+
+                        <small>
+                            NAME
+                        </small>
+
+                        <strong>
+                            YOUR NAME
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            ROLE
+                        </small>
+
+                        <strong>
+                            SOFTWARE DEVELOPER
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-footer">
+
+
+                    <span>
+                        SYSTEM STATUS
+                    </span>
+
+                    <span class="online">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        ONLINE
+
+                    </span>
+
+                </div>
+
 
             </div>
+
+
+            <div class="floating-tech tech-1">
+                &lt;/&gt;
+            </div>
+
+            <div class="floating-tech tech-2">
+                AI
+            </div>
+
+            <div class="floating-tech tech-3">
+                { }
+            </div>
+
 
         </div>
 
     </div>
+
+
+    <div class="scroll-down">
+
+        <span>
+            SCROLL TO EXPLORE
+        </span>
+
+        <i class="fa-solid fa-arrow-down"></i>
+
+    </div>
+
 
 </section>
 
@@ -220,23 +438,27 @@
     id="about"
 >
 
+
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-title reveal">
 
-            <span>
+            <span class="section-number">
                 01
             </span>
 
             <div>
 
-                <p>
-                    ABOUT ME
-                </p>
+                <span class="eyebrow">
+                    PROFILE
+                </span>
 
                 <h2>
-                    เกี่ยวกับฉัน
+                    About
+                    <span>
+                        Me
+                    </span>
                 </h2>
 
             </div>
@@ -244,88 +466,123 @@
         </div>
 
 
-
         <div class="about-grid">
 
 
-            <div class="about-main">
+            <div class="about-text reveal">
 
-                <p class="large-text">
 
-                    ผม/ฉันเป็นผู้ที่มีความสนใจในการพัฒนาตนเอง
-                    และพร้อมเรียนรู้ประสบการณ์ใหม่ ๆ
-                    มีความรับผิดชอบในการทำงาน
-                    สามารถทำงานร่วมกับผู้อื่นได้ดี
-                    และให้ความสำคัญกับคุณภาพของงาน
+                <span class="terminal-line">
+                    $ whoami
+                </span>
+
+
+                <p class="big-text">
+
+                    ผมเป็นคนที่สนใจเทคโนโลยี
+                    และชอบเปลี่ยนไอเดียให้กลายเป็น
+                    <span>
+                        Digital Solution
+                    </span>
+                    ที่ใช้งานได้จริง
 
                 </p>
 
 
                 <p>
 
-                    เป้าหมายของผม/ฉันคือการนำความรู้
-                    ความสามารถ และประสบการณ์ที่มี
-                    มาประยุกต์ใช้เพื่อสร้างผลงานที่มีคุณค่า
-                    พร้อมพัฒนาตนเองและเติบโตไปพร้อมกับองค์กร
+                    มีความสนใจด้าน Software Development,
+                    Web Technology, Artificial Intelligence,
+                    Data และการออกแบบระบบ
+                    พร้อมเรียนรู้เทคโนโลยีใหม่ ๆ
+                    และพัฒนาตัวเองอย่างต่อเนื่อง
 
                 </p>
+
+
+                <p>
+
+                    เป้าหมายคือการสร้างผลิตภัณฑ์ที่ไม่เพียง
+                    ทำงานได้ดี แต่ยังมอบประสบการณ์ที่ดี
+                    ให้กับผู้ใช้งาน
+
+                </p>
+
 
             </div>
 
 
 
-            <div class="about-details">
+            <div class="about-stats reveal">
 
-                <div class="detail">
+
+                <div class="stat-card">
 
                     <span>
-                        Location
+                        EXPERIENCE
                     </span>
 
                     <strong>
-                        Bangkok, Thailand
+                        03+
                     </strong>
+
+                    <small>
+                        YEARS
+                    </small>
 
                 </div>
 
 
-                <div class="detail">
+                <div class="stat-card">
 
                     <span>
-                        Email
+                        PROJECTS
                     </span>
 
                     <strong>
-                        yourname@email.com
+                        20+
                     </strong>
+
+                    <small>
+                        COMPLETED
+                    </small>
 
                 </div>
 
 
-                <div class="detail">
+                <div class="stat-card">
 
                     <span>
-                        Phone
+                        TECHNOLOGIES
                     </span>
 
                     <strong>
-                        08X-XXX-XXXX
+                        15+
                     </strong>
+
+                    <small>
+                        STACKS
+                    </small>
 
                 </div>
 
 
-                <div class="detail">
+                <div class="stat-card">
 
                     <span>
-                        Career Status
+                        LOCATION
                     </span>
 
                     <strong>
-                        Open to Work
+                        TH
                     </strong>
 
+                    <small>
+                        THAILAND
+                    </small>
+
                 </div>
+
 
             </div>
 
@@ -346,23 +603,233 @@
     id="experience"
 >
 
+
     <div class="container">
 
 
-        <div class="section-header light">
+        <div class="section-title reveal">
 
-            <span>
+            <span class="section-number">
                 02
             </span>
 
             <div>
 
-                <p>
-                    EXPERIENCE
-                </p>
+                <span class="eyebrow">
+                    CAREER
+                </span>
 
                 <h2>
-                    ประสบการณ์ทำงาน
+                    Experience
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- JOB 01 -->
+
+            <article class="timeline-item reveal">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-date">
+
+                    2024 — PRESENT
+
+                </div>
+
+
+                <div class="timeline-content">
+
+
+                    <span class="company">
+                        COMPANY NAME
+                    </span>
+
+
+                    <h3>
+                        Software Developer
+                    </h3>
+
+
+                    <p>
+
+                        พัฒนาและดูแลระบบ Web Application
+                        รวมถึงออกแบบ API และเชื่อมต่อ
+                        ระบบ Backend / Database
+
+                    </p>
+
+
+                    <div class="mini-tags">
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <span>
+                            React
+                        </span>
+
+                        <span>
+                            Node.js
+                        </span>
+
+                        <span>
+                            SQL
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- JOB 02 -->
+
+            <article class="timeline-item reveal">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-date">
+
+                    2022 — 2024
+
+                </div>
+
+
+                <div class="timeline-content">
+
+
+                    <span class="company">
+                        COMPANY NAME
+                    </span>
+
+
+                    <h3>
+                        Junior Developer
+                    </h3>
+
+
+                    <p>
+
+                        พัฒนาเว็บไซต์และระบบภายในองค์กร
+                        รวมถึงแก้ไขปัญหาและปรับปรุงประสิทธิภาพ
+                        ของระบบ
+
+                    </p>
+
+
+                    <div class="mini-tags">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- JOB 03 -->
+
+            <article class="timeline-item reveal">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-date">
+
+                    2021 — 2022
+
+                </div>
+
+
+                <div class="timeline-content">
+
+
+                    <span class="company">
+                        UNIVERSITY / PROJECT
+                    </span>
+
+
+                    <h3>
+                        Internship / Developer
+                    </h3>
+
+
+                    <p>
+
+                        เรียนรู้กระบวนการพัฒนา Software
+                        และการทำงานร่วมกับทีมจริง
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section
+    class="section"
+    id="skills"
+>
+
+
+    <div class="container">
+
+
+        <div class="section-title reveal">
+
+            <span class="section-number">
+                03
+            </span>
+
+            <div>
+
+                <span class="eyebrow">
+                    TECHNOLOGY
+                </span>
+
+                <h2>
+                    Tech Stack
                 </h2>
 
             </div>
@@ -371,65 +838,296 @@
 
 
 
-        <div class="experience-list">
+        <div class="skills-grid">
 
 
-            <!-- EXPERIENCE 01 -->
+            <div class="skill-panel reveal">
 
-            <article class="experience">
 
-                <div class="experience-date">
+                <div class="panel-title">
 
-                    <strong>
-                        2024
-                    </strong>
+                    <i class="fa-solid fa-code"></i>
 
                     <span>
-                        — Present
+                        DEVELOPMENT
                     </span>
 
                 </div>
 
 
-                <div class="experience-content">
+                <div class="skill-row">
 
-                    <span class="company">
-                        COMPANY NAME
+                    <div class="skill-name">
+
+                        <span>
+                            HTML / CSS
+                        </span>
+
+                        <span>
+                            95%
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span style="width:95%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <div class="skill-name">
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <span>
+                            90%
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span style="width:90%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <div class="skill-name">
+
+                        <span>
+                            React
+                        </span>
+
+                        <span>
+                            85%
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span style="width:85%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <div class="skill-name">
+
+                        <span>
+                            Node.js
+                        </span>
+
+                        <span>
+                            80%
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span style="width:80%"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-panel reveal">
+
+
+                <div class="panel-title">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <span>
+                        AI / DATA
                     </span>
 
-                    <h3>
-                        Job Position
-                    </h3>
+                </div>
 
 
-                    <p>
+                <div class="tech-cloud">
 
-                        รับผิดชอบงานด้านการวางแผน
-                        การประสานงาน และการดำเนินงาน
-                        ตามเป้าหมายของทีม
+                    <span>Python</span>
 
-                    </p>
+                    <span>SQL</span>
+
+                    <span>Power BI</span>
+
+                    <span>Machine Learning</span>
+
+                    <span>Data Analysis</span>
+
+                    <span>API</span>
+
+                    <span>Git</span>
+
+                    <span>GitHub</span>
+
+                    <span>Docker</span>
+
+                </div>
+
+            </div>
 
 
-                    <ul>
 
-                        <li>
-                            วางแผนและดำเนินงานตามเป้าหมาย
-                        </li>
+            <div class="skill-panel reveal">
 
-                        <li>
-                            ประสานงานกับทีมและหน่วยงานที่เกี่ยวข้อง
-                        </li>
 
-                        <li>
-                            จัดทำรายงานและติดตามผลการดำเนินงาน
-                        </li>
+                <div class="panel-title">
 
-                        <li>
-                            ปรับปรุงกระบวนการทำงานให้มีประสิทธิภาพมากขึ้น
-                        </li>
+                    <i class="fa-solid fa-terminal"></i>
 
-                    </ul>
+                    <span>
+                        SOFT SKILLS
+                    </span>
+
+                </div>
+
+
+                <div class="soft-skills">
+
+                    <span>
+                        Problem Solving
+                    </span>
+
+                    <span>
+                        Teamwork
+                    </span>
+
+                    <span>
+                        Communication
+                    </span>
+
+                    <span>
+                        Leadership
+                    </span>
+
+                    <span>
+                        Creativity
+                    </span>
+
+                    <span>
+                        Adaptability
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section
+    class="section dark-section"
+    id="projects"
+>
+
+
+    <div class="container">
+
+
+        <div class="section-title reveal">
+
+            <span class="section-number">
+                04
+            </span>
+
+            <div>
+
+                <span class="eyebrow">
+                    SELECTED WORK
+                </span>
+
+                <h2>
+                    Projects
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <article
+                class="project-card reveal"
+            >
+
+                <div class="project-top">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <span class="project-type">
+                    WEB APPLICATION
+                </span>
+
+
+                <h3>
+                    Smart Management System
+                </h3>
+
+
+                <p>
+
+                    ระบบจัดการข้อมูลแบบครบวงจร
+                    พร้อม Dashboard สำหรับติดตาม
+                    ข้อมูลแบบ Real-time
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        React
+                    </span>
+
+                    <span>
+                        Node.js
+                    </span>
+
+                    <span>
+                        MySQL
+                    </span>
 
                 </div>
 
@@ -437,58 +1135,62 @@
 
 
 
-            <!-- EXPERIENCE 02 -->
+            <!-- PROJECT 02 -->
 
-            <article class="experience">
+            <article
+                class="project-card reveal"
+            >
 
-                <div class="experience-date">
-
-                    <strong>
-                        2022
-                    </strong>
+                <div class="project-top">
 
                     <span>
-                        — 2024
+                        02
                     </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
                 </div>
 
 
-                <div class="experience-content">
+                <div class="project-icon">
 
-                    <span class="company">
-                        COMPANY NAME
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <span class="project-type">
+                    DATA / ANALYTICS
+                </span>
+
+
+                <h3>
+                    Business Intelligence Dashboard
+                </h3>
+
+
+                <p>
+
+                    Dashboard สำหรับวิเคราะห์ข้อมูล
+                    และช่วยสนับสนุนการตัดสินใจ
+                    ขององค์กร
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Power BI
                     </span>
 
-                    <h3>
-                        Previous Position
-                    </h3>
+                    <span>
+                        SQL
+                    </span>
 
-
-                    <p>
-
-                        มีส่วนร่วมในโครงการต่าง ๆ
-                        และรับผิดชอบงานที่เกี่ยวข้องกับ
-                        การดำเนินงานขององค์กร
-
-                    </p>
-
-
-                    <ul>
-
-                        <li>
-                            สนับสนุนการดำเนินงานของทีม
-                        </li>
-
-                        <li>
-                            จัดการข้อมูลและเอกสาร
-                        </li>
-
-                        <li>
-                            ติดต่อประสานงานกับผู้เกี่ยวข้อง
-                        </li>
-
-                    </ul>
+                    <span>
+                        Python
+                    </span>
 
                 </div>
 
@@ -496,41 +1198,124 @@
 
 
 
-            <!-- EXPERIENCE 03 -->
+            <!-- PROJECT 03 -->
 
-            <article class="experience">
+            <article
+                class="project-card reveal"
+            >
 
-                <div class="experience-date">
-
-                    <strong>
-                        2021
-                    </strong>
+                <div class="project-top">
 
                     <span>
-                        — 2022
+                        03
                     </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
                 </div>
 
 
-                <div class="experience-content">
+                <div class="project-icon">
 
-                    <span class="company">
-                        COMPANY / ORGANIZATION
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+
+                <span class="project-type">
+                    AI / AUTOMATION
+                </span>
+
+
+                <h3>
+                    AI Assistant
+                </h3>
+
+
+                <p>
+
+                    ระบบช่วยตอบคำถามและประมวลผลข้อมูล
+                    ด้วย AI เพื่อช่วยลดขั้นตอนการทำงาน
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Python
                     </span>
 
-                    <h3>
-                        Internship / Project
-                    </h3>
+                    <span>
+                        AI
+                    </span>
+
+                    <span>
+                        API
+                    </span>
+
+                </div>
+
+            </article>
 
 
-                    <p>
 
-                        ฝึกประสบการณ์และเรียนรู้การทำงานจริง
-                        พร้อมพัฒนาทักษะด้านการทำงานเป็นทีม
-                        และการแก้ไขปัญหา
+            <!-- PROJECT 04 -->
 
-                    </p>
+            <article
+                class="project-card reveal"
+            >
+
+                <div class="project-top">
+
+                    <span>
+                        04
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                </div>
+
+
+                <span class="project-type">
+                    MOBILE / UI
+                </span>
+
+
+                <h3>
+                    Modern Mobile Application
+                </h3>
+
+
+                <p>
+
+                    ออกแบบ Interface
+                    และประสบการณ์ผู้ใช้งาน
+                    สำหรับ Application รุ่นใหม่
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        UI/UX
+                    </span>
+
+                    <span>
+                        Figma
+                    </span>
+
+                    <span>
+                        React Native
+                    </span>
 
                 </div>
 
@@ -553,353 +1338,24 @@
     id="education"
 >
 
-    <div class="container">
-
-
-        <div class="section-header">
-
-            <span>
-                03
-            </span>
-
-            <div>
-
-                <p>
-                    EDUCATION
-                </p>
-
-                <h2>
-                    การศึกษา
-                </h2>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="education-grid">
-
-
-            <article class="education-card">
-
-                <div class="education-year">
-                    2020 — 2024
-                </div>
-
-                <h3>
-                    ปริญญาตรี
-                </h3>
-
-                <h4>
-                    ชื่อมหาวิทยาลัย
-                </h4>
-
-                <p>
-                    คณะ / สาขาวิชา
-                </p>
-
-                <span>
-                    GPA: 3.XX
-                </span>
-
-            </article>
-
-
-
-            <article class="education-card">
-
-                <div class="education-year">
-                    2017 — 2020
-                </div>
-
-                <h3>
-                    มัธยมศึกษา
-                </h3>
-
-                <h4>
-                    ชื่อโรงเรียน
-                </h4>
-
-                <p>
-                    สายการเรียน
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     SKILLS
-===================================================== -->
-
-<section
-    class="section gray-section"
-    id="skills"
->
 
     <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-title reveal">
 
-            <span>
-                04
-            </span>
-
-            <div>
-
-                <p>
-                    SKILLS
-                </p>
-
-                <h2>
-                    ทักษะความสามารถ
-                </h2>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="skills-layout">
-
-
-            <!-- TECHNICAL -->
-
-            <div class="skill-box">
-
-                <h3>
-                    Technical Skills
-                </h3>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-
-                        <span>
-                            Microsoft Office
-                        </span>
-
-                        <span>
-                            90%
-                        </span>
-
-                    </div>
-
-                    <div class="progress">
-                        <span style="width:90%"></span>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-
-                        <span>
-                            HTML / CSS
-                        </span>
-
-                        <span>
-                            85%
-                        </span>
-
-                    </div>
-
-                    <div class="progress">
-                        <span style="width:85%"></span>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-
-                        <span>
-                            JavaScript
-                        </span>
-
-                        <span>
-                            75%
-                        </span>
-
-                    </div>
-
-                    <div class="progress">
-                        <span style="width:75%"></span>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-
-                        <span>
-                            Data Analysis
-                        </span>
-
-                        <span>
-                            80%
-                        </span>
-
-                    </div>
-
-                    <div class="progress">
-                        <span style="width:80%"></span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- SOFT SKILLS -->
-
-            <div class="skill-box">
-
-                <h3>
-                    Professional Skills
-                </h3>
-
-
-                <div class="tag-list">
-
-                    <span>
-                        Communication
-                    </span>
-
-                    <span>
-                        Teamwork
-                    </span>
-
-                    <span>
-                        Problem Solving
-                    </span>
-
-                    <span>
-                        Time Management
-                    </span>
-
-                    <span>
-                        Leadership
-                    </span>
-
-                    <span>
-                        Adaptability
-                    </span>
-
-                    <span>
-                        Creativity
-                    </span>
-
-                    <span>
-                        Responsibility
-                    </span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- LANGUAGES -->
-
-            <div class="skill-box">
-
-                <h3>
-                    Languages
-                </h3>
-
-
-                <div class="language">
-
-                    <span>
-                        Thai
-                    </span>
-
-                    <strong>
-                        Native
-                    </strong>
-
-                </div>
-
-
-                <div class="language">
-
-                    <span>
-                        English
-                    </span>
-
-                    <strong>
-                        Intermediate
-                    </strong>
-
-                </div>
-
-
-                <div class="language">
-
-                    <span>
-                        Other
-                    </span>
-
-                    <strong>
-                        Basic
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PORTFOLIO
-===================================================== -->
-
-<section
-    class="section"
-    id="projects"
->
-
-    <div class="container">
-
-
-        <div class="section-header">
-
-            <span>
+            <span class="section-number">
                 05
             </span>
 
             <div>
 
-                <p>
-                    PORTFOLIO
-                </p>
+                <span class="eyebrow">
+                    EDUCATION
+                </span>
 
                 <h2>
-                    ผลงานที่โดดเด่น
+                    Education
                 </h2>
 
             </div>
@@ -907,200 +1363,46 @@
         </div>
 
 
-
-        <div class="portfolio-grid">
-
-
-            <!-- PROJECT 01 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <div class="project-category">
-                    WEBSITE
-                </div>
-
-                <h3>
-                    Professional Website
-                </h3>
-
-                <p>
-
-                    ออกแบบและพัฒนาเว็บไซต์
-                    เพื่อแสดงข้อมูลและผลงาน
-                    โดยเน้นประสบการณ์ของผู้ใช้งาน
-
-                </p>
-
-                <div class="project-tech">
-
-                    <span>
-                        HTML
-                    </span>
-
-                    <span>
-                        CSS
-                    </span>
-
-                    <span>
-                        JavaScript
-                    </span>
-
-                </div>
-
-            </article>
+        <div class="education-card reveal">
 
 
+            <div class="education-icon">
 
-            <!-- PROJECT 02 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <div class="project-category">
-                    DATA
-                </div>
-
-                <h3>
-                    Data Dashboard
-                </h3>
-
-                <p>
-
-                    สร้าง Dashboard
-                    เพื่อวิเคราะห์และนำเสนอข้อมูล
-                    ให้สามารถเข้าใจข้อมูลได้ง่ายขึ้น
-
-                </p>
-
-                <div class="project-tech">
-
-                    <span>
-                        Excel
-                    </span>
-
-                    <span>
-                        Power BI
-                    </span>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PROJECT 03 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <div class="project-category">
-                    PROJECT
-                </div>
-
-                <h3>
-                    Academic Project
-                </h3>
-
-                <p>
-
-                    โครงการที่ทำระหว่างการศึกษา
-                    ซึ่งแสดงถึงความสามารถ
-                    ในการวางแผนและทำงานร่วมกับทีม
-
-                </p>
-
-                <div class="project-tech">
-
-                    <span>
-                        Planning
-                    </span>
-
-                    <span>
-                        Teamwork
-                    </span>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ACHIEVEMENTS
-===================================================== -->
-
-<section class="achievement-section">
-
-    <div class="container">
-
-
-        <div class="achievement-grid">
-
-
-            <div>
-
-                <strong>
-                    3+
-                </strong>
-
-                <span>
-                    Years Experience
-                </span>
+                <i class="fa-solid fa-graduation-cap"></i>
 
             </div>
 
 
-            <div>
-
-                <strong>
-                    10+
-                </strong>
+            <div class="education-main">
 
                 <span>
-                    Projects
+                    2020 — 2024
                 </span>
+
+                <h3>
+                    Bachelor of Science
+                </h3>
+
+                <h4>
+                    UNIVERSITY NAME
+                </h4>
+
+                <p>
+                    Faculty / Major Name
+                </p>
 
             </div>
 
 
-            <div>
+            <div class="gpa">
+
+                <small>
+                    GPA
+                </small>
 
                 <strong>
-                    5+
+                    3.XX
                 </strong>
-
-                <span>
-                    Certifications
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    100%
-                </strong>
-
-                <span>
-                    Commitment
-                </span>
 
             </div>
 
@@ -1117,140 +1419,88 @@
 ===================================================== -->
 
 <section
-    class="section contact-section"
+    class="contact-section"
     id="contact"
 >
+
 
     <div class="container">
 
 
-        <div class="contact-wrapper">
+        <div class="contact-content reveal">
 
 
-            <div class="contact-heading">
+            <span class="eyebrow">
+                06 / GET IN TOUCH
+            </span>
 
+
+            <h2>
+
+                Let's build
                 <span>
-                    06 / CONTACT
+                    something
                 </span>
+                amazing.
 
-                <h2>
-                    Let's work
-                    <br>
-                    together.
-                </h2>
-
-                <p>
-
-                    หากคุณกำลังมองหาผู้สมัคร
-                    ที่พร้อมเรียนรู้และพัฒนาตนเอง
-                    สามารถติดต่อผม/ฉันได้ผ่านช่องทางด้านล่าง
-
-                </p>
-
-            </div>
+            </h2>
 
 
+            <p>
 
-            <div class="contact-information">
+                มีโปรเจกต์ งาน หรือโอกาสดี ๆ
+                ที่ต้องการพูดคุยกัน?
+                ติดต่อผมได้เลย
 
-
-                <a
-                    href="mailto:yourname@email.com"
-                    class="contact-item"
-                >
-
-                    <div class="contact-icon">
-                        ✉
-                    </div>
-
-                    <div>
-
-                        <small>
-                            EMAIL
-                        </small>
-
-                        <strong>
-                            yourname@email.com
-                        </strong>
-
-                    </div>
-
-                </a>
+            </p>
 
 
+            <a
+                href="mailto:your@email.com"
+                class="email-link"
+            >
 
-                <a
-                    href="tel:+66800000000"
-                    class="contact-item"
-                >
+                your@email.com
 
-                    <div class="contact-icon">
-                        ☎
-                    </div>
+                <i class="fa-solid fa-arrow-right"></i>
 
-                    <div>
+            </a>
 
-                        <small>
-                            PHONE
-                        </small>
 
-                        <strong>
-                            08X-XXX-XXXX
-                        </strong>
-
-                    </div>
-
-                </a>
-
+            <div class="contact-socials">
 
 
                 <a
                     href="https://github.com/"
                     target="_blank"
-                    class="contact-item"
                 >
 
-                    <div class="contact-icon">
-                        GH
-                    </div>
+                    <i class="fa-brands fa-github"></i>
 
-                    <div>
-
-                        <small>
-                            GITHUB
-                        </small>
-
-                        <strong>
-                            github.com/username
-                        </strong>
-
-                    </div>
+                    GitHub
 
                 </a>
-
 
 
                 <a
                     href="https://linkedin.com/"
                     target="_blank"
-                    class="contact-item"
                 >
 
-                    <div class="contact-icon">
-                        in
-                    </div>
+                    <i class="fa-brands fa-linkedin"></i>
 
-                    <div>
+                    LinkedIn
 
-                        <small>
-                            LINKEDIN
-                        </small>
+                </a>
 
-                        <strong>
-                            linkedin.com/in/username
-                        </strong>
 
-                    </div>
+                <a
+                    href="tel:+66800000000"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    08X-XXX-XXXX
 
                 </a>
 
@@ -1263,6 +1513,9 @@
 </section>
 
 
+</main>
+
+
 
 <!-- =====================================================
      FOOTER
@@ -1270,16 +1523,25 @@
 
 <footer>
 
-    <div class="container footer-content">
+    <div class="container footer-inner">
 
-        <p>
-            © <span id="year"></span>
-            ชื่อ นามสกุล
-        </p>
+        <span>
 
-        <a href="#home">
-            BACK TO TOP ↑
-        </a>
+            ©
+            <span id="year"></span>
+            YOUR NAME
+
+        </span>
+
+
+        <span class="footer-code">
+
+            Designed & Built with
+            <span>
+                &lt;code /&gt;
+            </span>
+
+        </span>
 
     </div>
 
@@ -1287,115 +1549,9 @@
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- JS -->
 
-<script>
-
-    /*
-    ================================================
-    MOBILE MENU
-    ================================================
-    */
-
-    const menuButton =
-        document.getElementById("menuButton");
-
-    const navigation =
-        document.getElementById("navigation");
-
-
-    menuButton.addEventListener(
-        "click",
-        function () {
-
-            navigation.classList.toggle("active");
-
-        }
-    );
-
-
-    /*
-    ================================================
-    CLOSE MENU AFTER CLICK
-    ================================================
-    */
-
-    document
-        .querySelectorAll("#navigation a")
-        .forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        navigation.classList.remove("active");
-
-                    }
-                );
-
-            }
-        );
-
-
-    /*
-    ================================================
-    CURRENT YEAR
-    ================================================
-    */
-
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
-
-
-    /*
-    ================================================
-    SCROLL ANIMATION
-    ================================================
-    */
-
-    const animatedElements =
-        document.querySelectorAll(
-            ".experience, .education-card, .project-card, .skill-box"
-        );
-
-
-    const observer =
-        new IntersectionObserver(
-            function (entries) {
-
-                entries.forEach(
-                    function (entry) {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add(
-                                "show"
-                            );
-
-                        }
-
-                    }
-                );
-
-            },
-            {
-                threshold: 0.15
-            }
-        );
-
-
-    animatedElements.forEach(
-        function (element) {
-
-            observer.observe(element);
-
-        }
-    );
-
-</script>
+<script src="script.js"></script>
 
 
 </body>
