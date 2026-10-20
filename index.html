@@ -1,1046 +1,360 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10233f">
-  <meta name="description" content="เว็บไซต์เรซูเม่ ว่าที่ร้อยตรี ธนพนธ์ ลิขิตปัญญาวัฒน์ ประสบการณ์ด้านความปลอดภัย การผลิต และอุตสาหกรรม">
-  <meta name="author" content="ธนพรธ์ ลิขิตปัญญาวัฒน์">
-
-  <title>Resume | ธนพรธ์ ลิขิตปัญญาวัฒน์</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --navy: #10233f;
-      --navy-light: #193b61;
-      --blue: #2864a0;
-      --sky: #80b9f1;
-      --background: #eaf0f7;
-      --paper: #ffffff;
-      --text: #28384b;
-      --muted: #718096;
-      --line: #dfe7f1;
-      --soft: #f5f8fc;
-      --radius: 16px;
-      --shadow: 0 18px 55px rgba(16, 35, 63, .12);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: "Sarabun", sans-serif;
-      font-size: 15px;
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .toolbar {
-      width: min(100% - 32px, 1000px);
-      margin: 22px auto 0;
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 11px 18px;
-      border: 1px solid transparent;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      color: #fff;
-      background: var(--navy);
-      box-shadow: 0 5px 14px #10233f20;
-    }
-
-    .btn-primary:hover {
-      background: var(--navy-light);
-    }
-
-    .btn-outline {
-      color: var(--navy);
-      background: #fff;
-      border-color: var(--line);
-    }
-
-    .resume {
-      width: min(100% - 32px, 1000px);
-      margin: 16px auto 48px;
-      background: var(--paper);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    /* ส่วนหัว */
-
-    .header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      padding: 46px 48px;
-      color: #fff;
-      background:
-        radial-gradient(ellipse at 90% 0%, #2d5a86 0%, transparent 42%),
-        linear-gradient(125deg, #10233f 0%, #17385c 100%);
-      overflow: hidden;
-    }
-
-    .header::after {
-      content: "";
-      position: absolute;
-      right: -90px;
-      bottom: -175px;
-      width: 340px;
-      height: 340px;
-      border: 1px solid #ffffff12;
-      border-radius: 50%;
-      box-shadow: 0 0 0 35px #ffffff06,
-                  0 0 0 70px #ffffff04;
-      pointer-events: none;
-    }
-
-    .profile-wrap {
-      position: relative;
-      z-index: 1;
-      flex: 0 0 150px;
-    }
-
-    .profile {
-      display: block;
-      width: 150px;
-      height: 180px;
-      object-fit: cover;
-      object-position: center top;
-      border: 4px solid #ffffff35;
-      border-radius: 14px;
-      background: #dce6f2;
-    }
-
-    .header-info {
-      position: relative;
-      z-index: 1;
-      min-width: 0;
-      flex: 1;
-    }
-
-    .eyebrow {
-      margin: 0 0 8px;
-      color: var(--sky);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .name {
-      margin: 0;
-      font-size: clamp(25px, 3.4vw, 35px);
-      line-height: 1.55;
-      font-weight: 700;
-      letter-spacing: -.4px;
-    }
-
-    .position {
-      margin: 8px 0 0;
-      color: #d7e6f7;
-      font-size: 15px;
-    }
-
-    .header-line {
-      width: 66px;
-      height: 3px;
-      margin: 20px 0;
-      border-radius: 4px;
-      background: var(--sky);
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px 20px;
-      color: #e0ebf7;
-      font-size: 13px;
-    }
-
-    .contact-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-item svg {
-      width: 16px;
-      height: 16px;
-      flex: 0 0 16px;
-      stroke: #91c6ff;
-    }
-
-    /* แถบแนะนำตัว */
-
-    .intro-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      background: #f1f6fc;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .intro-item {
-      padding: 17px 20px;
-      text-align: center;
-    }
-
-    .intro-item + .intro-item {
-      border-left: 1px solid var(--line);
-    }
-
-    .intro-label {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: .4px;
-    }
-
-    .intro-value {
-      color: var(--navy);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    /* เนื้อหา */
-
-    .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .column {
-      min-width: 0;
-      padding: 34px 36px;
-    }
-
-    .column + .column {
-      background: #fbfcfe;
-      border-left: 1px solid var(--line);
-    }
-
-    .section {
-      margin-bottom: 32px;
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    .section:last-child {
-      margin-bottom: 0;
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 20px;
-      padding-bottom: 11px;
-      border-bottom: 1px solid var(--line);
-      color: var(--navy);
-      font-size: 19px;
-      line-height: 1.5;
-      font-weight: 700;
-    }
-
-    .heading-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-      height: 35px;
-      flex: 0 0 35px;
-      border-radius: 10px;
-      background: #e7f0fb;
-      color: var(--blue);
-    }
-
-    .heading-icon svg {
-      width: 19px;
-      height: 19px;
-      stroke: currentColor;
-    }
-
-    .section p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .entry {
-      position: relative;
-      margin: 0 0 23px 5px;
-      padding: 0 0 0 19px;
-      border-left: 2px solid #d9e7f7;
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    .entry:last-child {
-      margin-bottom: 0;
-    }
-
-    .entry::before {
-      content: "";
-      position: absolute;
-      top: 7px;
-      left: -6px;
-      width: 10px;
-      height: 10px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-      background: var(--blue);
-      box-shadow: 0 0 0 1px #cbdcf0;
-    }
-
-    .entry h3 {
-      margin: 0;
-      color: #1c3555;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.6;
-    }
-
-    .role {
-      margin-top: 3px;
-      color: var(--blue);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .entry p {
-      margin-top: 5px;
-      font-size: 13px;
-    }
-
-    .education-meta {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 4px 10px;
-      border-radius: 6px;
-      color: #234e7c;
-      background: #e7f0fb;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .skill {
-      display: inline-flex;
-      padding: 6px 11px;
-      border: 1px solid #dce7f4;
-      border-radius: 7px;
-      background: #edf4fc;
-      color: #244e7b;
-      font-size: 12px;
-      line-height: 1.6;
-      font-weight: 500;
-    }
-
-    .personal {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .personal li {
-      padding: 10px 0;
-      border-bottom: 1px solid #e9eef5;
-      font-size: 13px;
-      overflow-wrap: anywhere;
-    }
-
-    .personal li:last-child {
-      border-bottom: 0;
-    }
-
-    .personal strong {
-      display: block;
-      margin-bottom: 2px;
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .goal {
-      padding: 17px;
-      border: 1px solid #e0eafa;
-      border-left: 4px solid var(--blue);
-      border-radius: 9px;
-      background: #f3f7fd;
-    }
-
-    .goal p {
-      color: #3f526a;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      padding: 18px 32px;
-      background: #f2f6fb;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .footer strong {
-      color: var(--navy);
-    }
-
-    /* มือถือและแท็บเล็ต */
-
-    @media (max-width: 720px) {
-      .toolbar {
-        width: calc(100% - 24px);
-        margin-top: 12px;
-      }
-
-      .resume {
-        width: calc(100% - 20px);
-        margin: 12px auto 24px;
-        border-radius: 12px;
-      }
-
-      .header {
-        gap: 17px;
-        align-items: flex-start;
-        padding: 27px 20px;
-      }
-
-      .profile-wrap {
-        flex-basis: 105px;
-      }
-
-      .profile {
-        width: 105px;
-        height: 132px;
-        border-radius: 10px;
-      }
-
-      .name {
-        font-size: clamp(19px, 4.8vw, 26px);
-      }
-
-      .position {
-        font-size: 12px;
-      }
-
-      .eyebrow {
-        font-size: 10px;
-        letter-spacing: 1.3px;
-      }
-
-      .header-line {
-        margin: 13px 0;
-      }
-
-      .contact {
-        gap: 7px;
-        flex-direction: column;
-        font-size: 12px;
-      }
-
-      .intro-item {
-        padding: 13px 6px;
-      }
-
-      .intro-label {
-        font-size: 10px;
-      }
-
-      .intro-value {
-        font-size: 12px;
-      }
-
-      .content {
-        grid-template-columns: 1fr;
-      }
-
-      .column {
-        padding: 27px 22px;
-      }
-
-      .column + .column {
-        border-left: 0;
-        border-top: 1px solid var(--line);
-      }
-
-      .section-heading {
-        font-size: 18px;
-      }
-
-      .footer {
-        padding: 16px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .header {
-        gap: 12px;
-        padding: 22px 14px;
-      }
-
-      .profile-wrap {
-        flex-basis: 88px;
-      }
-
-      .profile {
-        width: 88px;
-        height: 112px;
-      }
-
-      .name {
-        font-size: 18px;
-      }
-
-      .position {
-        font-size: 11px;
-      }
-
-      .intro-value {
-        font-size: 11px;
-      }
-
-      .column {
-        padding: 23px 17px;
-      }
-    }
-
-    /* ตั้งค่าหน้าพิมพ์ A4 */
-
-    @page {
-      size: A4;
-      margin: 9mm;
-    }
-
-    @media print {
-      html,
-      body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: #fff !important;
-        font-size: 10pt;
-      }
-
-      .no-print {
-        display: none !important;
-      }
-
-      .resume {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        overflow: visible;
-        border-radius: 0;
-        box-shadow: none;
-      }
-
-      .header {
-        padding: 24px 28px;
-        gap: 23px;
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-      }
-
-      .profile-wrap {
-        flex-basis: 112px;
-      }
-
-      .profile {
-        width: 112px;
-        height: 136px;
-      }
-
-      .name {
-        font-size: 25px;
-      }
-
-      .position {
-        font-size: 12px;
-      }
-
-      .header-line {
-        margin: 12px 0;
-      }
-
-      .contact {
-        gap: 5px 13px;
-        font-size: 10px;
-      }
-
-      .intro-bar,
-      .intro-item,
-      .column + .column,
-      .heading-icon,
-      .skill,
-      .education-meta,
-      .goal,
-      .footer {
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-      }
-
-      .intro-item {
-        padding: 10px 8px;
-      }
-
-      .intro-value {
-        font-size: 11px;
-      }
-
-      .column {
-        padding: 22px 23px;
-      }
-
-      .section {
-        margin-bottom: 20px;
-      }
-
-      .section-heading {
-        margin-bottom: 13px;
-        font-size: 15px;
-      }
-
-      .entry {
-        margin-bottom: 16px;
-      }
-
-      .entry h3 {
-        font-size: 13px;
-      }
-
-      .role {
-        font-size: 11px;
-      }
-
-      .entry p,
-      .section p {
-        font-size: 10px;
-      }
-
-      .skill {
-        padding: 4px 7px;
-        font-size: 9px;
-      }
-
-      .personal li,
-      .personal strong {
-        font-size: 10px;
-      }
-
-      .goal {
-        padding: 11px;
-      }
-
-      .footer {
-        padding: 12px 18px;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101b33">
+<title>Resume | ธนพรธ์ ลิขิตปัญญาวัฒน์</title>
+<style>
+:root {
+  --navy:#101b33; --blue:#2e6cf6; --cyan:#8ee8e0;
+  --bg:#f3f6fb; --text:#172033; --muted:#637087;
+  --white:#fff; --line:#e5eaf2;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:80px; }
+body {
+  margin:0; font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.7;
+}
+a { color:inherit; text-decoration:none; }
+button { font:inherit; cursor:pointer; }
+nav {
+  position:sticky; top:0; z-index:10; background:var(--navy);
+  color:white; display:flex; justify-content:space-between;
+  align-items:center; padding:14px max(5%,calc((100% - 1080px)/2));
+}
+.logo { font-weight:900; letter-spacing:2px; }
+.logo span { color:var(--cyan); }
+.links { display:flex; gap:20px; font-size:14px; }
+.links a:hover { color:var(--cyan); }
+.menu { display:none; background:none; border:1px solid #64748b;
+  color:white; border-radius:8px; padding:6px 10px; }
+.hero {
+  color:white; padding:65px 6%;
+  background:radial-gradient(ellipse at 85% 10%,#284c87,transparent 40%),
+  linear-gradient(135deg,#0b1220,#18375b);
+}
+.hero-inner {
+  max-width:1080px; margin:auto; display:grid;
+  grid-template-columns:1.3fr .7fr; gap:45px; align-items:center;
+}
+.eyebrow { color:var(--cyan); font-weight:800; letter-spacing:2px; }
+h1 { font-size:clamp(30px,5vw,60px); line-height:1.2; margin:15px 0; }
+h1 span { display:block; color:var(--cyan); }
+.intro { color:#d2dced; max-width:650px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.btn {
+  display:inline-block; padding:12px 18px; border-radius:10px;
+  border:1px solid transparent; font-weight:750;
+}
+.primary { background:var(--cyan); color:#09202b; }
+.secondary { border-color:#8291aa; color:white; background:transparent; }
+.photo {
+  width:100%; max-width:280px; aspect-ratio:4/5; object-fit:cover;
+  object-position:center 25%; border-radius:24px; border:4px solid #ffffff22;
+  box-shadow:0 20px 50px #0004; justify-self:center;
+}
+.container { max-width:1080px; padding:0 22px; margin:auto; }
+.stats {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  background:white; border:1px solid var(--line); border-radius:16px;
+  margin-top:-25px; position:relative; box-shadow:0 12px 35px #17203312;
+}
+.stat { text-align:center; padding:20px 8px; }
+.stat + .stat { border-left:1px solid var(--line); }
+.stat strong,.stat small { display:block; }
+.stat small { color:var(--muted); }
+main { max-width:1080px; margin:auto; padding:40px 22px 60px; }
+section.content { margin-top:40px; scroll-margin-top:85px; }
+.kicker { color:var(--blue); font-size:12px; font-weight:900; letter-spacing:2px; }
+h2 { font-size:clamp(24px,3vw,34px); line-height:1.3; margin:4px 0 20px; }
+.card {
+  background:white; border:1px solid var(--line); border-radius:16px;
+  padding:24px; box-shadow:0 5px 20px #17203308;
+}
+.about { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.card p { color:#4b5870; margin-top:0; }
+.card h3 { margin-top:0; }
+ul { padding-left:22px; }
+li { margin:6px 0; }
+.timeline { display:grid; gap:16px; }
+.job { border-left:3px solid var(--blue); }
+.job h3 { margin-bottom:4px; }
+.company { color:var(--blue); font-weight:800; margin-bottom:10px; }
+.skills { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.skill-icon { font-size:25px; color:var(--blue); }
+.skill h3 { margin:6px 0; }
+.skill p { margin-bottom:0; }
+.chip {
+  display:inline-block; background:#eef4ff; color:#31518a;
+  border-radius:20px; padding:4px 10px; font-size:12px; margin:5px 3px 0 0;
+}
+.education { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.contact-panel {
+  background:linear-gradient(135deg,#101b33,#1b3762); color:white;
+  border-radius:20px; padding:28px; display:grid;
+  grid-template-columns:1fr 1fr; gap:24px;
+}
+.contact-panel p { color:#d0dbee; }
+.contact-item {
+  display:block; margin:10px 0; padding:12px 14px;
+  border:1px solid #ffffff25; border-radius:10px;
+  background:#ffffff0c; overflow-wrap:anywhere;
+}
+.contact-item small { display:block; color:#b5c3d9; }
+.contact-item strong { font-size:14px; }
+footer { text-align:center; color:var(--muted); padding:25px; font-size:13px; }
+@media(max-width:700px) {
+  nav { padding:12px 18px; }
+  .menu { display:block; }
+  .links {
+    display:none; position:absolute; top:55px; left:12px; right:12px;
+    background:#101b33; border:1px solid #39465c; border-radius:12px;
+    padding:12px; flex-direction:column; gap:0;
+  }
+  .links.open { display:flex; }
+  .links a { padding:10px; }
+  .hero { padding:42px 20px 55px; }
+  .hero-inner { grid-template-columns:1fr; gap:28px; }
+  .photo { width:190px; grid-row:1; }
+  .stats { margin-top:-20px; }
+  .stat { font-size:13px; }
+  .about,.education,.contact-panel { grid-template-columns:1fr; }
+  .skills { grid-template-columns:1fr; }
+  main { padding:30px 16px 45px; }
+  .card { padding:20px; }
+}
+@media(max-width:400px) {
+  .stats { grid-template-columns:1fr; }
+  .stat + .stat { border-left:0; border-top:1px solid var(--line); }
+  .actions .btn { width:100%; text-align:center; }
+}
+@media print {
+  @page { size:A4; margin:12mm; }
+  body { background:white; font-size:10pt; }
+  nav,.actions,footer { display:none !important; }
+  .hero { background:white !important; color:#111; padding:15px 0; }
+  .hero-inner { grid-template-columns:1fr 120px; gap:15px; }
+  h1 { font-size:25pt; }
+  h1 span,.intro,.eyebrow { color:#333; }
+  .photo { width:110px; box-shadow:none; }
+  .container { padding:0; }
+  .stats { margin:0; box-shadow:none; }
+  main { padding:10px 0; }
+  section.content { margin-top:18px; break-inside:avoid; }
+  .card { box-shadow:none; padding:14px; }
+  .skills { gap:8px; }
+  .contact-panel { background:white; color:#111; border:1px solid #ddd; }
+  .contact-panel p,.contact-item small { color:#444; }
+  .contact-item { background:white; border-color:#ddd; }
+}
+</style>
 </head>
-
 <body>
 
-  <!-- ปุ่มควบคุม ไม่แสดงใน PDF -->
-  <nav class="toolbar no-print" aria-label="เครื่องมือเรซูเม่">
-    <button class="btn btn-outline" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      ↑ กลับด้านบน
-    </button>
+<nav>
+  <a class="logo" href="#home">THANAPHON<span>.</span></a>
+  <button class="menu" id="menuButton" aria-expanded="false">☰ เมนู</button>
+  <div class="links" id="navLinks">
+    <a href="#about">เกี่ยวกับผม</a>
+    <a href="#experience">ประสบการณ์</a>
+    <a href="#skills">ทักษะ</a>
+    <a href="#education">การศึกษา</a>
+    <a href="#contact">ติดต่อ</a>
+  </div>
+</nav>
 
-    <button class="btn btn-primary" type="button" onclick="savePDF()">
-      <svg width="17" height="17" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="2"
-           stroke-linecap="round" stroke-linejoin="round"
-           aria-hidden="true">
-        <path d="M12 3v12m-5-5 5 5 5-5"/>
-        <path d="M5 17v4h14v-4"/>
-      </svg>
-      พิมพ์ / บันทึกเป็น PDF
-    </button>
-  </nav>
-
-  <main class="resume">
-
-    <!-- ส่วนหัวและรูปโปรไฟล์ -->
-    <header class="header">
-
-      <div class="profile-wrap">
-        <img
-          class="profile"
-          src="https://i.postimg.cc/fT6QdgWy/BF9C08BE-26D1-4885-B55A-C26A0544B18C.png"
-          alt="รูปโปรไฟล์ ธนพรธ์ ลิขิตปัญญาวัฒน์"
-          onerror="this.style.display='none';"
-        >
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">PROFESSIONAL RESUME · 2026</div>
+      <h1>ว่าที่ร้อยตรี ธนพรธ์
+        <span>ลิขิตปัญญาวัฒน์</span>
+      </h1>
+      <p class="intro">
+        มีประสบการณ์ด้านความปลอดภัยในการทำงาน การควบคุมกระบวนการผลิต
+        และงานปฏิบัติการ มุ่งเน้นคุณภาพ ความรับผิดชอบ
+        การทำงานเป็นทีม และความปลอดภัยเป็นสำคัญ
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">✉ ติดต่อสมัครงาน</a>
+        <button class="btn secondary" id="printButton">▣ พิมพ์ / บันทึก PDF</button>
       </div>
+    </div>
+    <img class="photo"
+      src="https://i.postimg.cc/fT6QdgWy/BF9C08BE-26D1-4885-B55A-C26A0544B18C.png"
+      alt="รูปโปรไฟล์"
+      onerror="this.style.display='none'">
+  </div>
+</header>
 
-      <div class="header-info">
-        <p class="eyebrow">Professional Resume</p>
+<div class="container">
+  <div class="stats">
+    <div class="stat"><strong>Safety First</strong><small>ใส่ใจความปลอดภัย</small></div>
+    <div class="stat"><strong>Teamwork</strong><small>ทำงานร่วมกับทีม</small></div>
+    <div class="stat"><strong>Continuous Learning</strong><small>พร้อมเรียนรู้</small></div>
+  </div>
+</div>
 
-        <h1 class="name">
-          ว่าที่ร้อยตรี<br>
-          ธนพนธ์ ลิขิตปัญญาวัฒน์
-        </h1>
-
-        <p class="position">
-          ประวัติส่วนตัวเพื่อสมัครงาน | Career Profile
+<main>
+  <section class="content" id="about">
+    <div class="kicker">PROFILE</div>
+    <h2>เกี่ยวกับผม</h2>
+    <div class="about">
+      <div class="card">
+        <p>
+          มีประสบการณ์ทำงานในองค์กรอุตสาหกรรม ทั้งงานด้านความปลอดภัย
+          งานควบคุมไลน์ผลิต และงานเกี่ยวกับรถขนส่งน้ำมัน
+          ให้ความสำคัญกับการปฏิบัติตามขั้นตอน การประสานงาน
+          และการทำงานอย่างมีความรับผิดชอบ
         </p>
-
-        <div class="header-line"></div>
-
-        <!-- แก้ไขเบอร์ อีเมล และจังหวัดตรงนี้ -->
-        <div class="contact">
-
-          <span class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none"
-                 stroke-width="1.8" stroke-linecap="round"
-                 stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
-                19.79 19.79 0 0 1-8.63-3.07
-                19.5 19.5 0 0 1-6-6
-                19.79 19.79 0 0 1-3.07-8.67
-                A2 2 0 0 1 4.11 2h3
-                a2 2 0 0 1 2 1.72
-                c.12.96.36 1.9.72 2.8
-                a2 2 0 0 1-.45 2.11L8.11 9.9
-                a16 16 0 0 0 6 6l1.27-1.27
-                a2 2 0 0 1 2.11-.45
-                c.9.36 1.84.6 2.8.72
-                A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span>โทร: [ใส่เบอร์โทร]</span>
-          </span>
-
-          <span class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none"
-                 stroke-width="1.8" stroke-linecap="round"
-                 stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2"/>
-              <path d="m3 7 9 6 9-6"/>
-            </svg>
-            <span>อีเมล: [ใส่อีเมล]</span>
-          </span>
-
-          <span class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none"
-                 stroke-width="1.8" stroke-linecap="round"
-                 stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 10c0 5-8 12-8 12S4 15 4 10
-                a8 8 0 1 1 16 0Z"/>
-              <circle cx="12" cy="10" r="2.5"/>
-            </svg>
-            <span>ที่อยู่: [ใส่จังหวัด]</span>
-          </span>
-
-        </div>
       </div>
-    </header>
-
-    <!-- จุดเด่น -->
-    <div class="intro-bar">
-
-      <div class="intro-item">
-        <span class="intro-label">CAREER FIELD</span>
-        <span class="intro-value">ความปลอดภัย</span>
+      <div class="card">
+        <h3>จุดแข็งในการทำงาน</h3>
+        <ul>
+          <li>ตระหนักถึงกฎระเบียบและความปลอดภัย</li>
+          <li>ประสานงานและทำงานร่วมกับทีม</li>
+          <li>มีประสบการณ์ในงานปฏิบัติการและการผลิต</li>
+          <li>พร้อมเรียนรู้และพัฒนาทักษะใหม่</li>
+        </ul>
       </div>
-
-      <div class="intro-item">
-        <span class="intro-label">EXPERIENCE</span>
-        <span class="intro-value">อุตสาหกรรม / การผลิต</span>
-      </div>
-
-      <div class="intro-item">
-        <span class="intro-label">EDUCATION</span>
-        <span class="intro-value">ระดับปริญญาตรี</span>
-      </div>
-
     </div>
+  </section>
 
-    <div class="content">
-
-      <!-- คอลัมน์ซ้าย -->
-      <section class="column" aria-label="ประวัติและประสบการณ์">
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="8" r="4"/>
-                <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
-              </svg>
-            </span>
-            ประวัติส่วนตัว
-          </h2>
-
-          <p>
-            ผู้สมัครงานที่มีประสบการณ์ในงานอุตสาหกรรม
-            งานควบคุมกระบวนการผลิต และงานด้านความปลอดภัย
-            มีพื้นฐานการศึกษาด้านอาชีวอนามัยและความปลอดภัย
-            พร้อมนำความรู้และประสบการณ์มาประยุกต์ใช้ในการทำงาน
-            เพื่อสนับสนุนการปฏิบัติงานอย่างมีประสิทธิภาพ
-          </p>
-        </div>
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="7" width="18" height="14" rx="2"/>
-                <path d="M8 7V4h8v3M3 12h18M10 12v2h4v-2"/>
-              </svg>
-            </span>
-            ประสบการณ์ทำงาน
-          </h2>
-
-          <div class="entry">
-            <h3>SCG</h3>
-            <div class="role">เจ้าหน้าที่ความปลอดภัย (จป.)</div>
-            <p class="muted">
-              ประสบการณ์ด้านงานความปลอดภัยในสถานประกอบการ
-              และการสนับสนุนการทำงานอย่างปลอดภัย
-            </p>
-          </div>
-
-          <div class="entry">
-            <h3>CPF</h3>
-            <div class="role">หัวหน้าควบคุมไลน์ผลิต</div>
-            <p class="muted">
-              ประสบการณ์งานควบคุมกระบวนการผลิต
-              และการดูแลการปฏิบัติงานในสายการผลิต
-            </p>
-          </div>
-
-          <div class="entry">
-            <h3>PTTOR</h3>
-            <div class="role">พนักงานตีซีลรถน้ำมัน</div>
-            <p class="muted">
-              ประสบการณ์งานตรวจสอบและตีซีลรถน้ำมัน
-              ตามกระบวนการปฏิบัติงาน
-            </p>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4
-                  1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/>
-              </svg>
-            </span>
-            ตำแหน่งที่สนใจ
-          </h2>
-
-          <div class="skills">
-            <span class="skill">เจ้าหน้าที่ความปลอดภัย</span>
-            <span class="skill">ควบคุมการผลิต</span>
-            <span class="skill">งานอุตสาหกรรม</span>
-            <span class="skill">ตรวจสอบกระบวนการ</span>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- คอลัมน์ขวา -->
-      <section class="column" aria-label="การศึกษาและทักษะ">
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <path d="m2 10 10-7 10 7-10 7Z"/>
-                <path d="M6 13v5c4 3 8 3 12 0v-5"/>
-                <path d="M22 10v6"/>
-              </svg>
-            </span>
-            ประวัติการศึกษา
-          </h2>
-
-          <div class="entry">
-            <h3>ระดับปริญญาตรี</h3>
-
-            <div class="role">
-              สาขาอาชีวอนามัยและความปลอดภัย
-            </div>
-
-            <p>
-              คณะสาธารณสุขศาสตร์<br>
-              มหาวิทยาลัยเฉลิมกาญนา จังหวัดระยอง
-            </p>
-
-            <span class="education-meta">
-              เกรดเฉลี่ย 2.92
-            </span>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 3 4 7v5c0 5 3.4 8 8 9
-                  4.6-1 8-4 8-9V7Z"/>
-                <path d="m9 12 2 2 4-4"/>
-              </svg>
-            </span>
-            ความรู้และทักษะ
-          </h2>
-
-          <div class="skills">
-            <span class="skill">อาชีวอนามัยและความปลอดภัย</span>
-            <span class="skill">การควบคุมการผลิต</span>
-            <span class="skill">การตรวจสอบซีลรถน้ำมัน</span>
-            <span class="skill">งานในสถานประกอบการ</span>
-            <span class="skill">การปฏิบัติตามขั้นตอนการทำงาน</span>
-          </div>
-
-          <p class="muted" style="margin-top:14px">
-            สามารถเพิ่มเติมทักษะเฉพาะทาง ใบรับรอง
-            โปรแกรมที่ใช้งานได้ และประสบการณ์ที่เกี่ยวข้อง
-            กับตำแหน่งงานตามข้อมูลจริง
-          </p>
-        </div>
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 11v5M12 7h.01"/>
-              </svg>
-            </span>
-            ข้อมูลเพิ่มเติม
-          </h2>
-
-          <ul class="personal">
-            <li>
-              <strong>วันเดือนปีเกิด</strong>
-              [กรอกข้อมูลหากต้องการ]
-            </li>
-            <li>
-              <strong>ใบอนุญาต / ใบรับรอง</strong>
-              [กรอกข้อมูลตามจริง]
-            </li>
-            <li>
-              <strong>ผู้รับรองการทำงาน</strong>
-              [กรอกข้อมูลหากต้องการ]
-            </li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h2 class="section-heading">
-            <span class="heading-icon">
-              <svg viewBox="0 0 24 24" fill="none"
-                   stroke-width="1.8" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 3v18M3 12h18"/>
-                <path d="m5 5 14 14M19 5 5 19"/>
-              </svg>
-            </span>
-            เป้าหมายในการทำงาน
-          </h2>
-
-          <div class="goal">
-            <p>
-              มุ่งมั่นปฏิบัติงานอย่างมีความรับผิดชอบ
-              พัฒนาความรู้และทักษะอย่างต่อเนื่อง
-              พร้อมนำประสบการณ์ด้านความปลอดภัย
-              และกระบวนการผลิตมาสนับสนุนองค์กร
-              เพื่อสร้างสภาพแวดล้อมการทำงานที่ปลอดภัย
-              และเพิ่มประสิทธิภาพในการทำงาน
-            </p>
-          </div>
-        </div>
-
-      </section>
+  <section class="content" id="experience">
+    <div class="kicker">CAREER HISTORY</div>
+    <h2>ประสบการณ์ทำงาน</h2>
+    <div class="timeline">
+      <article class="card job">
+        <h3>เจ้าหน้าที่ความปลอดภัยในการทำงาน (จป.)</h3>
+        <div class="company">SCG</div>
+        <ul>
+          <li>สนับสนุนการดำเนินงานด้านความปลอดภัยในสถานที่ทำงาน</li>
+          <li>ส่งเสริมการปฏิบัติตามกฎระเบียบและขั้นตอนความปลอดภัย</li>
+          <li>ประสานงานเพื่อสนับสนุนสภาพแวดล้อมการทำงานที่ปลอดภัย</li>
+        </ul>
+      </article>
+      <article class="card job">
+        <h3>หัวหน้าควบคุมไลน์ผลิต</h3>
+        <div class="company">CPF</div>
+        <ul>
+          <li>ควบคุมและติดตามการทำงานของไลน์ผลิตตามแผน</li>
+          <li>ประสานงานกับทีมเพื่อให้กระบวนการทำงานต่อเนื่อง</li>
+          <li>ให้ความสำคัญกับคุณภาพและความปลอดภัย</li>
+        </ul>
+      </article>
+      <article class="card job">
+        <h3>พนักงานตีซีลรถน้ำมัน</h3>
+        <div class="company">PTTOR</div>
+        <ul>
+          <li>ปฏิบัติงานเกี่ยวกับการตรวจสอบและตีซีลรถขนส่งน้ำมัน</li>
+          <li>ให้ความสำคัญกับความถูกต้องและความปลอดภัย</li>
+          <li>ปฏิบัติงานตามขั้นตอนและประสานงานกับผู้เกี่ยวข้อง</li>
+        </ul>
+      </article>
     </div>
+    <p style="color:#637087;font-size:13px">
+      โปรดเพิ่มช่วงเวลาทำงานและปรับหน้าที่ให้ตรงกับประสบการณ์จริง
+    </p>
+  </section>
 
-    <footer class="footer">
-      <span><strong>PROFESSIONAL RESUME</strong></span>
-      <span>ธนพรธ์ ลิขิตปัญญาวัฒน์</span>
-    </footer>
+  <section class="content" id="skills">
+    <div class="kicker">CAPABILITIES</div>
+    <h2>ทักษะและความสามารถ</h2>
+    <div class="skills">
+      <div class="card skill">
+        <div class="skill-icon">✓</div>
+        <h3>ความปลอดภัย</h3>
+        <p>ตระหนักถึงความเสี่ยง ระเบียบปฏิบัติ และการทำงานอย่างปลอดภัย</p>
+        <span class="chip">Safety</span><span class="chip">Compliance</span>
+      </div>
+      <div class="card skill">
+        <div class="skill-icon">⚙</div>
+        <h3>กระบวนการผลิต</h3>
+        <p>ติดตามงานในไลน์ผลิต ประสานงาน และสนับสนุนการทำงาน</p>
+        <span class="chip">Production</span><span class="chip">Quality</span>
+      </div>
+      <div class="card skill">
+        <div class="skill-icon">◎</div>
+        <h3>การทำงานเป็นทีม</h3>
+        <p>สื่อสาร ประสานงาน และรับผิดชอบงานที่ได้รับมอบหมาย</p>
+        <span class="chip">Teamwork</span><span class="chip">Coordination</span>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <section class="content" id="education">
+    <div class="kicker">EDUCATION</div>
+    <h2>ประวัติการศึกษา</h2>
+    <div class="education">
+      <div class="card">
+        <h3>🎓 ปริญญาตรี</h3>
+        <p>สาขาอาชีวอนามัยและความปลอดภัย</p>
+        <p>มหาวิทยาลัยเฉลิมกาญนา · จังหวัดระยอง</p>
+        <p><strong>เกรดเฉลี่ย 2.92</strong></p>
+      </div>
+      <div class="card">
+        <h3>✦ คุณวุฒิ</h3>
+        <p>ว่าที่ร้อยตรี</p>
+        <p>กรุณาตรวจสอบชื่อสถาบัน ชื่อหลักสูตร และคุณวุฒิให้ถูกต้องก่อนเผยแพร่</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // เปิดหน้าต่างพิมพ์ เพื่อเลือกบันทึกเป็น PDF
-    function savePDF() {
-      window.print();
-    }
-  </script>
+  <section class="content" id="contact">
+    <div class="contact-panel">
+      <div>
+        <div class="kicker" style="color:#8ee8e0">GET IN TOUCH</div>
+        <h2>ติดต่อเพื่อร่วมงาน</h2>
+        <p>สนใจประวัติการทำงาน ติดต่อได้ผ่านช่องทางด้านข้าง
+          กรุณาแก้ไขข้อมูลตัวอย่างให้เป็นข้อมูลจริงก่อนเผยแพร่</p>
+      </div>
+      <div>
+        <!-- แก้เบอร์โทร อีเมล และจังหวัดให้เป็นข้อมูลจริง -->
+        <a class="contact-item" href="tel:+66000000000">
+          <small>โทรศัพท์</small><strong>ใส่เบอร์โทรศัพท์ของคุณ</strong>
+        </a>
+        <a class="contact-item" href="mailto:your.email@example.com">
+          <small>อีเมล</small><strong>ใส่อีเมลของคุณ</strong>
+        </a>
+        <div class="contact-item">
+          <small>พื้นที่ทำงาน</small><strong>ใส่จังหวัดที่ต้องการทำงาน</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
+<footer>
+  © <span id="year"></span> THANAPHON · Professional Resume
+</footer>
+
+<script>
+  // เปิดและปิดเมนูบนมือถือ
+  const menuButton = document.getElementById("menuButton");
+  const navLinks = document.getElementById("navLinks");
+
+  menuButton.addEventListener("click", function () {
+    const opened = navLinks.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(opened));
+  });
+
+  navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // เปิดหน้าต่างพิมพ์ เพื่อพิมพ์หรือบันทึกเป็น PDF
+  document.getElementById("printButton").addEventListener("click", function () {
+    window.print();
+  });
+
+  // อัปเดตปีอัตโนมัติ
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
