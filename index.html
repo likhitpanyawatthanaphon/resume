@@ -3,152 +3,76 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101b33">
 <title>Resume | ธนพรธ์ ลิขิตปัญญาวัฒน์</title>
 <style>
-:root {
-  --navy:#101b33; --blue:#2e6cf6; --cyan:#8ee8e0;
-  --bg:#f3f6fb; --text:#172033; --muted:#637087;
-  --white:#fff; --line:#e5eaf2;
+:root{--navy:#101b33;--blue:#2e6cf6;--cyan:#8ee8e0;--bg:#f3f6fb;--text:#172033;--muted:#637087}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:10;background:#101b33;color:white;padding:14px 6%;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-weight:900;letter-spacing:2px}
+.logo span{color:var(--cyan)}
+nav .links{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a:hover{color:var(--cyan)}
+.hero{background:linear-gradient(130deg,#0b1220,#18375b);color:white;padding:65px 6%;display:grid;grid-template-columns:1.4fr .6fr;gap:35px;align-items:center}
+.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:2px;font-size:13px}
+h1{font-size:clamp(30px,5vw,55px);line-height:1.2;margin:15px 0}
+h1 span{display:block;color:var(--cyan)}
+.hero p{color:#d2dced;max-width:650px}
+.photo{width:100%;max-width:250px;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:24px;border:4px solid #ffffff30;display:block;margin:auto}
+.btn{display:inline-block;padding:11px 17px;border-radius:10px;font-weight:750;margin:8px 8px 0 0}
+.primary{background:var(--cyan);color:#102033}
+.outline{border:1px solid #ffffff70;color:white}
+.stats{max-width:1000px;margin:-25px auto 0;padding:0 18px;position:relative;display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{background:white;text-align:center;padding:20px 10px;border:1px solid #e5eaf2}
+.stat:first-child{border-radius:15px 0 0 15px}
+.stat:last-child{border-radius:0 15px 15px 0}
+.stat strong,.stat small{display:block}
+.stat small{color:var(--muted)}
+main{max-width:1000px;margin:auto;padding:30px 20px 60px}
+section.content{margin-top:38px;scroll-margin-top:80px}
+.kicker{color:var(--blue);font-weight:850;font-size:12px;letter-spacing:2px}
+h2{font-size:clamp(24px,3vw,32px);line-height:1.3;margin:4px 0 18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:white;border:1px solid #e5eaf2;border-radius:16px;padding:23px;box-shadow:0 7px 24px #17203308}
+.card p{color:#4b5870;margin:0 0 8px}
+.highlight{background:#eef4ff}
+ul{padding-left:21px}
+li{margin:6px 0}
+.job{margin:14px 0}
+.company{color:var(--blue);font-weight:800;margin:2px 0 8px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.skill{background:white;padding:20px;border-radius:15px;border:1px solid #e5eaf2}
+.skill h3{margin:0 0 8px}
+.skill p{color:var(--muted);font-size:14px;margin:0}
+.contact{background:linear-gradient(130deg,#101b33,#1b3762);color:white;border-radius:20px;padding:28px}
+.contact p{color:#d2dced}
+.contact a{display:block;background:#ffffff12;padding:12px;margin:10px 0;border-radius:10px;overflow-wrap:anywhere}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:13px}
+@media(max-width:700px){
+ nav{align-items:flex-start;flex-direction:column}
+ nav .links{gap:12px}
+ .hero{grid-template-columns:1fr;padding:40px 6%;gap:25px}
+ .photo{max-width:190px;grid-row:1}
+ .stats{grid-template-columns:1fr;margin-top:-15px}
+ .stat,.stat:first-child,.stat:last-child{border-radius:0}
+ .stat:first-child{border-radius:12px 12px 0 0}
+ .stat:last-child{border-radius:0 0 12px 12px}
+ .grid2,.skills{grid-template-columns:1fr}
 }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top:80px; }
-body {
-  margin:0; font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
-  background:var(--bg); color:var(--text); line-height:1.7;
-}
-a { color:inherit; text-decoration:none; }
-button { font:inherit; cursor:pointer; }
-nav {
-  position:sticky; top:0; z-index:10; background:var(--navy);
-  color:white; display:flex; justify-content:space-between;
-  align-items:center; padding:14px max(5%,calc((100% - 1080px)/2));
-}
-.logo { font-weight:900; letter-spacing:2px; }
-.logo span { color:var(--cyan); }
-.links { display:flex; gap:20px; font-size:14px; }
-.links a:hover { color:var(--cyan); }
-.menu { display:none; background:none; border:1px solid #64748b;
-  color:white; border-radius:8px; padding:6px 10px; }
-.hero {
-  color:white; padding:65px 6%;
-  background:radial-gradient(ellipse at 85% 10%,#284c87,transparent 40%),
-  linear-gradient(135deg,#0b1220,#18375b);
-}
-.hero-inner {
-  max-width:1080px; margin:auto; display:grid;
-  grid-template-columns:1.3fr .7fr; gap:45px; align-items:center;
-}
-.eyebrow { color:var(--cyan); font-weight:800; letter-spacing:2px; }
-h1 { font-size:clamp(30px,5vw,60px); line-height:1.2; margin:15px 0; }
-h1 span { display:block; color:var(--cyan); }
-.intro { color:#d2dced; max-width:650px; }
-.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
-.btn {
-  display:inline-block; padding:12px 18px; border-radius:10px;
-  border:1px solid transparent; font-weight:750;
-}
-.primary { background:var(--cyan); color:#09202b; }
-.secondary { border-color:#8291aa; color:white; background:transparent; }
-.photo {
-  width:100%; max-width:280px; aspect-ratio:4/5; object-fit:cover;
-  object-position:center 25%; border-radius:24px; border:4px solid #ffffff22;
-  box-shadow:0 20px 50px #0004; justify-self:center;
-}
-.container { max-width:1080px; padding:0 22px; margin:auto; }
-.stats {
-  display:grid; grid-template-columns:repeat(3,1fr);
-  background:white; border:1px solid var(--line); border-radius:16px;
-  margin-top:-25px; position:relative; box-shadow:0 12px 35px #17203312;
-}
-.stat { text-align:center; padding:20px 8px; }
-.stat + .stat { border-left:1px solid var(--line); }
-.stat strong,.stat small { display:block; }
-.stat small { color:var(--muted); }
-main { max-width:1080px; margin:auto; padding:40px 22px 60px; }
-section.content { margin-top:40px; scroll-margin-top:85px; }
-.kicker { color:var(--blue); font-size:12px; font-weight:900; letter-spacing:2px; }
-h2 { font-size:clamp(24px,3vw,34px); line-height:1.3; margin:4px 0 20px; }
-.card {
-  background:white; border:1px solid var(--line); border-radius:16px;
-  padding:24px; box-shadow:0 5px 20px #17203308;
-}
-.about { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-.card p { color:#4b5870; margin-top:0; }
-.card h3 { margin-top:0; }
-ul { padding-left:22px; }
-li { margin:6px 0; }
-.timeline { display:grid; gap:16px; }
-.job { border-left:3px solid var(--blue); }
-.job h3 { margin-bottom:4px; }
-.company { color:var(--blue); font-weight:800; margin-bottom:10px; }
-.skills { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-.skill-icon { font-size:25px; color:var(--blue); }
-.skill h3 { margin:6px 0; }
-.skill p { margin-bottom:0; }
-.chip {
-  display:inline-block; background:#eef4ff; color:#31518a;
-  border-radius:20px; padding:4px 10px; font-size:12px; margin:5px 3px 0 0;
-}
-.education { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.contact-panel {
-  background:linear-gradient(135deg,#101b33,#1b3762); color:white;
-  border-radius:20px; padding:28px; display:grid;
-  grid-template-columns:1fr 1fr; gap:24px;
-}
-.contact-panel p { color:#d0dbee; }
-.contact-item {
-  display:block; margin:10px 0; padding:12px 14px;
-  border:1px solid #ffffff25; border-radius:10px;
-  background:#ffffff0c; overflow-wrap:anywhere;
-}
-.contact-item small { display:block; color:#b5c3d9; }
-.contact-item strong { font-size:14px; }
-footer { text-align:center; color:var(--muted); padding:25px; font-size:13px; }
-@media(max-width:700px) {
-  nav { padding:12px 18px; }
-  .menu { display:block; }
-  .links {
-    display:none; position:absolute; top:55px; left:12px; right:12px;
-    background:#101b33; border:1px solid #39465c; border-radius:12px;
-    padding:12px; flex-direction:column; gap:0;
-  }
-  .links.open { display:flex; }
-  .links a { padding:10px; }
-  .hero { padding:42px 20px 55px; }
-  .hero-inner { grid-template-columns:1fr; gap:28px; }
-  .photo { width:190px; grid-row:1; }
-  .stats { margin-top:-20px; }
-  .stat { font-size:13px; }
-  .about,.education,.contact-panel { grid-template-columns:1fr; }
-  .skills { grid-template-columns:1fr; }
-  main { padding:30px 16px 45px; }
-  .card { padding:20px; }
-}
-@media(max-width:400px) {
-  .stats { grid-template-columns:1fr; }
-  .stat + .stat { border-left:0; border-top:1px solid var(--line); }
-  .actions .btn { width:100%; text-align:center; }
-}
-@media print {
-  @page { size:A4; margin:12mm; }
-  body { background:white; font-size:10pt; }
-  nav,.actions,footer { display:none !important; }
-  .hero { background:white !important; color:#111; padding:15px 0; }
-  .hero-inner { grid-template-columns:1fr 120px; gap:15px; }
-  h1 { font-size:25pt; }
-  h1 span,.intro,.eyebrow { color:#333; }
-  .photo { width:110px; box-shadow:none; }
-  .container { padding:0; }
-  .stats { margin:0; box-shadow:none; }
-  main { padding:10px 0; }
-  section.content { margin-top:18px; break-inside:avoid; }
-  .card { box-shadow:none; padding:14px; }
-  .skills { gap:8px; }
-  .contact-panel { background:white; color:#111; border:1px solid #ddd; }
-  .contact-panel p,.contact-item small { color:#444; }
-  .contact-item { background:white; border-color:#ddd; }
+@media print{
+ nav,.hero .btn,footer{display:none}
+ body{background:white;font-size:11pt}
+ .hero{background:white;color:#111;padding:20px 0}
+ .hero p{color:#333}
+ .hero h1 span{color:#222}
+ main{padding:10px 0}
+ .card,.skill{box-shadow:none;break-inside:avoid}
+ .contact{background:white;color:#111;border:1px solid #ddd}
+ .contact p{color:#333}
 }
 </style>
 </head>
@@ -156,8 +80,7 @@ footer { text-align:center; color:var(--muted); padding:25px; font-size:13px; }
 
 <nav>
   <a class="logo" href="#home">THANAPHON<span>.</span></a>
-  <button class="menu" id="menuButton" aria-expanded="false">☰ เมนู</button>
-  <div class="links" id="navLinks">
+  <div class="links">
     <a href="#about">เกี่ยวกับผม</a>
     <a href="#experience">ประสบการณ์</a>
     <a href="#skills">ทักษะ</a>
@@ -167,22 +90,14 @@ footer { text-align:center; color:var(--muted); padding:25px; font-size:13px; }
 </nav>
 
 <header class="hero" id="home">
-  <div class="hero-inner">
-    <div>
-      <div class="eyebrow">PROFESSIONAL RESUME · 2026</div>
-      <h1>ว่าที่ร้อยตรี ธนพนธ์
-        <span>ลิขิตปัญญาวัฒน์</span>
-      </h1>
-      <p class="intro">
-        มีประสบการณ์ด้านความปลอดภัยในการทำงาน การควบคุมกระบวนการผลิต
-        และงานปฏิบัติการ มุ่งเน้นคุณภาพ ความรับผิดชอบ
-        การทำงานเป็นทีม และความปลอดภัยเป็นสำคัญ
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">✉ ติดต่อสมัครงาน</a>
-        <button class="btn secondary" id="printButton">▣ พิมพ์ / บันทึก PDF</button>
-      </div>
-    </div>
+  <div>
+    <div class="eyebrow">PROFESSIONAL RESUME · 2026</div>
+    <h1>ว่าที่ร้อยตรี ธนพรธ์ <span>ลิขิตปัญญาวัฒน์</span></h1>
+    <p>ผู้มีประสบการณ์ด้านความปลอดภัยในการทำงาน การควบคุมกระบวนการผลิต และงานปฏิบัติการ พร้อมเรียนรู้สิ่งใหม่ ทำงานร่วมกับทีม และมุ่งเน้นคุณภาพกับความปลอดภัย</p>
+    <a class="btn primary" href="#contact">✉ ติดต่อสมัครงาน</a>
+    <button class="btn outline" onclick="window.print()">พิมพ์ / บันทึก PDF</button>
+  </div>
+  <div>
     <img class="photo"
       src="https://i.postimg.cc/fT6QdgWy/BF9C08BE-26D1-4885-B55A-C26A0544B18C.png"
       alt="รูปโปรไฟล์"
@@ -190,171 +105,118 @@ footer { text-align:center; color:var(--muted); padding:25px; font-size:13px; }
   </div>
 </header>
 
-<div class="container">
-  <div class="stats">
-    <div class="stat"><strong>Safety First</strong><small>ใส่ใจความปลอดภัย</small></div>
-    <div class="stat"><strong>Teamwork</strong><small>ทำงานร่วมกับทีม</small></div>
-    <div class="stat"><strong>Continuous Learning</strong><small>พร้อมเรียนรู้</small></div>
-  </div>
+<div class="stats">
+  <div class="stat"><strong>Safety First</strong><small>ใส่ใจความปลอดภัย</small></div>
+  <div class="stat"><strong>Teamwork</strong><small>ทำงานเป็นทีม</small></div>
+  <div class="stat"><strong>Continuous Learning</strong><small>พัฒนาอย่างต่อเนื่อง</small></div>
 </div>
 
 <main>
-  <section class="content" id="about">
-    <div class="kicker">PROFILE</div>
-    <h2>เกี่ยวกับผม</h2>
-    <div class="about">
-      <div class="card">
-        <p>
-          มีประสบการณ์ทำงานในองค์กรอุตสาหกรรม ทั้งงานด้านความปลอดภัย
-          งานควบคุมไลน์ผลิต และงานเกี่ยวกับรถขนส่งน้ำมัน
-          ให้ความสำคัญกับการปฏิบัติตามขั้นตอน การประสานงาน
-          และการทำงานอย่างมีความรับผิดชอบ
-        </p>
-      </div>
-      <div class="card">
-        <h3>จุดแข็งในการทำงาน</h3>
-        <ul>
-          <li>ตระหนักถึงกฎระเบียบและความปลอดภัย</li>
-          <li>ประสานงานและทำงานร่วมกับทีม</li>
-          <li>มีประสบการณ์ในงานปฏิบัติการและการผลิต</li>
-          <li>พร้อมเรียนรู้และพัฒนาทักษะใหม่</li>
-        </ul>
-      </div>
+<section class="content" id="about">
+  <div class="kicker">PROFILE</div>
+  <h2>เกี่ยวกับผม</h2>
+  <div class="grid2">
+    <div class="card">
+      <p>มีประสบการณ์ทำงานในองค์กรอุตสาหกรรม ทั้งงานด้านความปลอดภัย งานควบคุมไลน์ผลิต และงานปฏิบัติการเกี่ยวกับรถขนส่งน้ำมัน ให้ความสำคัญกับการปฏิบัติตามขั้นตอน การประสานงาน และความรับผิดชอบ</p>
     </div>
-  </section>
+    <div class="card highlight">
+      <h3>จุดแข็งในการทำงาน</h3>
+      <ul>
+        <li>ใส่ใจกฎระเบียบและความปลอดภัย</li>
+        <li>ประสานงานและทำงานร่วมกับทีมได้</li>
+        <li>มีประสบการณ์ในงานปฏิบัติการและการผลิต</li>
+        <li>พร้อมเรียนรู้และพัฒนาทักษะใหม่</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <section class="content" id="experience">
-    <div class="kicker">CAREER HISTORY</div>
-    <h2>ประสบการณ์ทำงาน</h2>
-    <div class="timeline">
-      <article class="card job">
-        <h3>เจ้าหน้าที่ความปลอดภัยในการทำงาน (จป.)</h3>
-        <div class="company">SCG</div>
-        <ul>
-          <li>สนับสนุนการดำเนินงานด้านความปลอดภัยในสถานที่ทำงาน</li>
-          <li>ส่งเสริมการปฏิบัติตามกฎระเบียบและขั้นตอนความปลอดภัย</li>
-          <li>ประสานงานเพื่อสนับสนุนสภาพแวดล้อมการทำงานที่ปลอดภัย</li>
-        </ul>
-      </article>
-      <article class="card job">
-        <h3>หัวหน้าควบคุมไลน์ผลิต</h3>
-        <div class="company">CPF</div>
-        <ul>
-          <li>ควบคุมและติดตามการทำงานของไลน์ผลิตตามแผน</li>
-          <li>ประสานงานกับทีมเพื่อให้กระบวนการทำงานต่อเนื่อง</li>
-          <li>ให้ความสำคัญกับคุณภาพและความปลอดภัย</li>
-        </ul>
-      </article>
-      <article class="card job">
-        <h3>พนักงานตีซีลรถน้ำมัน</h3>
-        <div class="company">PTTOR</div>
-        <ul>
-          <li>ปฏิบัติงานเกี่ยวกับการตรวจสอบและตีซีลรถขนส่งน้ำมัน</li>
-          <li>ให้ความสำคัญกับความถูกต้องและความปลอดภัย</li>
-          <li>ปฏิบัติงานตามขั้นตอนและประสานงานกับผู้เกี่ยวข้อง</li>
-        </ul>
-      </article>
-    </div>
-    <p style="color:#637087;font-size:13px">
-      โปรดเพิ่มช่วงเวลาทำงานและปรับหน้าที่ให้ตรงกับประสบการณ์จริง
-    </p>
-  </section>
+<section class="content" id="experience">
+  <div class="kicker">CAREER HISTORY</div>
+  <h2>ประสบการณ์ทำงาน</h2>
+  <div class="card job">
+    <h3>เจ้าหน้าที่ความปลอดภัยในการทำงาน (จป.)</h3>
+    <div class="company">SCG</div>
+    <ul>
+      <li>สนับสนุนการดำเนินงานด้านความปลอดภัยในสถานที่ทำงาน</li>
+      <li>ส่งเสริมการปฏิบัติตามกฎระเบียบและขั้นตอนความปลอดภัย</li>
+      <li>ประสานงานเพื่อสนับสนุนสภาพแวดล้อมการทำงานที่ปลอดภัย</li>
+    </ul>
+  </div>
+  <div class="card job">
+    <h3>หัวหน้าควบคุมไลน์ผลิต</h3>
+    <div class="company">CPF</div>
+    <ul>
+      <li>ควบคุมและติดตามการทำงานของไลน์ผลิตตามแผน</li>
+      <li>ประสานงานกับทีมให้กระบวนการผลิตดำเนินไปอย่างต่อเนื่อง</li>
+      <li>ให้ความสำคัญกับคุณภาพและความปลอดภัย</li>
+    </ul>
+  </div>
+  <div class="card job">
+    <h3>พนักงานตีซีลรถน้ำมัน</h3>
+    <div class="company">PTTOR</div>
+    <ul>
+      <li>ปฏิบัติงานเกี่ยวกับการตรวจสอบและตีซีลรถขนส่งน้ำมันตามขั้นตอน</li>
+      <li>ให้ความสำคัญกับความถูกต้องและความปลอดภัย</li>
+      <li>ประสานงานกับผู้เกี่ยวข้องในการปฏิบัติงาน</li>
+    </ul>
+  </div>
+  <p style="color:#637087;font-size:13px">ควรเพิ่มช่วงเวลาทำงานจริงของแต่ละบริษัทก่อนนำไปสมัครงาน</p>
+</section>
 
-  <section class="content" id="skills">
-    <div class="kicker">CAPABILITIES</div>
-    <h2>ทักษะและความสามารถ</h2>
-    <div class="skills">
-      <div class="card skill">
-        <div class="skill-icon">✓</div>
-        <h3>ความปลอดภัย</h3>
-        <p>ตระหนักถึงความเสี่ยง ระเบียบปฏิบัติ และการทำงานอย่างปลอดภัย</p>
-        <span class="chip">Safety</span><span class="chip">Compliance</span>
-      </div>
-      <div class="card skill">
-        <div class="skill-icon">⚙</div>
-        <h3>กระบวนการผลิต</h3>
-        <p>ติดตามงานในไลน์ผลิต ประสานงาน และสนับสนุนการทำงาน</p>
-        <span class="chip">Production</span><span class="chip">Quality</span>
-      </div>
-      <div class="card skill">
-        <div class="skill-icon">◎</div>
-        <h3>การทำงานเป็นทีม</h3>
-        <p>สื่อสาร ประสานงาน และรับผิดชอบงานที่ได้รับมอบหมาย</p>
-        <span class="chip">Teamwork</span><span class="chip">Coordination</span>
-      </div>
+<section class="content" id="skills">
+  <div class="kicker">CAPABILITIES</div>
+  <h2>ทักษะและความสามารถ</h2>
+  <div class="skills">
+    <div class="skill">
+      <h3>✓ ความปลอดภัย</h3>
+      <p>ตระหนักถึงความเสี่ยง ระเบียบปฏิบัติ และการทำงานอย่างปลอดภัย</p>
     </div>
-  </section>
+    <div class="skill">
+      <h3>⚙ การควบคุมการผลิต</h3>
+      <p>ติดตามงานในไลน์ผลิต ประสานงาน และสนับสนุนกระบวนการทำงาน</p>
+    </div>
+    <div class="skill">
+      <h3>◎ การทำงานเป็นทีม</h3>
+      <p>สื่อสาร ประสานงาน และรับผิดชอบงานที่ได้รับมอบหมาย</p>
+    </div>
+  </div>
+</section>
 
-  <section class="content" id="education">
-    <div class="kicker">EDUCATION</div>
-    <h2>ประวัติการศึกษา</h2>
-    <div class="education">
-      <div class="card">
-        <h3>🎓 ปริญญาตรี</h3>
-        <p>สาขาอาชีวอนามัยและความปลอดภัย</p>
-        <p>มหาวิทยาลัยเฉลิมกาญนา · จังหวัดระยอง</p>
-        <p><strong>เกรดเฉลี่ย 2.92</strong></p>
-      </div>
-      <div class="card">
-        <h3>✦ คุณวุฒิ</h3>
-        <p>ว่าที่ร้อยตรี</p>
-        <p>กรุณาตรวจสอบชื่อสถาบัน ชื่อหลักสูตร และคุณวุฒิให้ถูกต้องก่อนเผยแพร่</p>
-      </div>
+<section class="content" id="education">
+  <div class="kicker">EDUCATION</div>
+  <h2>ประวัติการศึกษา</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>🎓 ปริญญาตรี</h3>
+      <p>สาขาอาชีวอนามัยและความปลอดภัย</p>
+      <p>มหาวิทยาลัยเฉลิมกาญนา · จังหวัดระยอง</p>
+      <p>เกรดเฉลี่ย 2.92</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>คุณวุฒิ</h3>
+      <p>ว่าที่ร้อยตรี</p>
+      <p>กรุณาตรวจสอบชื่อสถาบันและหลักสูตรให้ถูกต้องก่อนเผยแพร่</p>
+    </div>
+  </div>
+</section>
 
-  <section class="content" id="contact">
-    <div class="contact-panel">
-      <div>
-        <div class="kicker" style="color:#8ee8e0">GET IN TOUCH</div>
-        <h2>ติดต่อเพื่อร่วมงาน</h2>
-        <p>สนใจประวัติการทำงาน ติดต่อได้ผ่านช่องทางด้านข้าง
-          กรุณาแก้ไขข้อมูลตัวอย่างให้เป็นข้อมูลจริงก่อนเผยแพร่</p>
-      </div>
-      <div>
-        <!-- แก้เบอร์โทร อีเมล และจังหวัดให้เป็นข้อมูลจริง -->
-        <a class="contact-item" href="tel:+66000000000">
-          <small>โทรศัพท์</small><strong>ใส่เบอร์โทรศัพท์ของคุณ</strong>
-        </a>
-        <a class="contact-item" href="mailto:your.email@example.com">
-          <small>อีเมล</small><strong>ใส่อีเมลของคุณ</strong>
-        </a>
-        <div class="contact-item">
-          <small>พื้นที่ทำงาน</small><strong>ใส่จังหวัดที่ต้องการทำงาน</strong>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="content" id="contact">
+  <div class="contact">
+    <div class="kicker" style="color:#8ee8e0">GET IN TOUCH</div>
+    <h2>ติดต่อเพื่อร่วมงาน</h2>
+    <p>กรุณาแก้ไขเบอร์โทรศัพท์ อีเมล และพื้นที่ทำงานด้านล่างให้เป็นข้อมูลจริง</p>
+    <!-- แก้ไขข้อมูลติดต่อในส่วนนี้ -->
+    <a href="tel:+66000000000">☎ โทรศัพท์: ใส่เบอร์โทรศัพท์ของคุณ</a>
+    <a href="mailto:your.email@example.com">✉ อีเมล: ใส่อีเมลของคุณ</a>
+    <a href="#contact">⌖ พื้นที่ทำงาน: ใส่จังหวัดที่ต้องการทำงาน</a>
+  </div>
+</section>
 </main>
 
-<footer>
-  © <span id="year"></span> THANAPHON · Professional Resume
-</footer>
-
+<footer>© <span id="year"></span> THANAPHON · Professional Resume</footer>
 <script>
-  // เปิดและปิดเมนูบนมือถือ
-  const menuButton = document.getElementById("menuButton");
-  const navLinks = document.getElementById("navLinks");
-
-  menuButton.addEventListener("click", function () {
-    const opened = navLinks.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(opened));
-  });
-
-  navLinks.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      navLinks.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  // เปิดหน้าต่างพิมพ์ เพื่อพิมพ์หรือบันทึกเป็น PDF
-  document.getElementById("printButton").addEventListener("click", function () {
-    window.print();
-  });
-
-  // อัปเดตปีอัตโนมัติ
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
