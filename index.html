@@ -2,704 +2,468 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10233f">
-  <meta name="description" content="เว็บไซต์เรซูเม่และประวัติการทำงานของว่าที่ร้อยตรี ธนพรธ์ ลิขิตปัญญาวัฒน์">
-  <title>Resume | ว่าที่ร้อยตรี ธนพรธ์ ลิขิตปัญญาวัฒน์</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101d35">
+<meta name="description" content="Professional Resume - Thanaphon Likhitpanyawat">
+<title>Thanaphon Likhitpanyawat | Resume</title>
 
-  <style>
-    :root {
-      --navy: #10233f;
-      --blue: #2356a5;
-      --gold: #d8ad62;
-      --ink: #243247;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --paper: #ffffff;
-      --bg: #edf1f6;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Leelawadee UI", Tahoma, Arial, sans-serif;
-      line-height: 1.75;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .topbar {
-      background: var(--navy);
-      color: white;
-      padding: 13px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 4px 16px #10233f20;
-    }
-
-    .topbar-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .brand span { color: var(--gold); }
-
-    .nav-actions {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    button {
-      font: inherit;
-      cursor: pointer;
-      border: 1px solid #ffffff40;
-      border-radius: 8px;
-      padding: 8px 13px;
-      color: white;
-      background: #ffffff12;
-    }
-
-    button:hover { background: #ffffff25; }
-
-    .container {
-      max-width: 1100px;
-      margin: 35px auto;
-      padding: 0 18px;
-    }
-
-    .resume {
-      display: grid;
-      grid-template-columns: 330px minmax(0, 1fr);
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 15px 55px #10233f14;
-    }
-
-    .sidebar {
-      background: var(--navy);
-      color: white;
-      padding: 36px 28px;
-    }
-
-    .profile {
-      text-align: center;
-      padding-bottom: 25px;
-      border-bottom: 1px solid #ffffff25;
-    }
-
-    .avatar {
-      width: 155px;
-      height: 155px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--gold);
-      background: #ffffff15;
-      display: block;
-      margin: 0 auto 20px;
-    }
-
-    .profile h1 {
-      font-size: 25px;
-      line-height: 1.5;
-      margin: 0 0 8px;
-    }
-
-    .rank {
-      color: var(--gold);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #d5dfef;
-      margin-top: 8px;
-    }
-
-    .side-section { margin-top: 27px; }
-
-    .side-section h2 {
-      font-size: 15px;
-      letter-spacing: 1px;
-      color: var(--gold);
-      margin: 0 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #ffffff25;
-    }
-
-    .contact-item {
-      font-size: 13px;
-      margin: 12px 0;
-      overflow-wrap: anywhere;
-      color: #edf3ff;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: white;
-      font-size: 12px;
-      margin-bottom: 2px;
-    }
-
-    .skill { margin: 15px 0; }
-
-    .skill-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 13px;
-      gap: 8px;
-    }
-
-    .skill-track {
-      height: 6px;
-      border-radius: 20px;
-      background: #ffffff25;
-      margin-top: 6px;
-      overflow: hidden;
-    }
-
-    .skill-fill {
-      height: 100%;
-      background: var(--gold);
-      border-radius: 20px;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .tag {
-      font-size: 12px;
-      padding: 5px 9px;
-      border: 1px solid #ffffff35;
-      border-radius: 6px;
-      color: #f1f5f9;
-    }
-
-    .main-content { padding: 42px 38px; }
-
-    .intro {
-      color: var(--muted);
-      font-size: 15px;
-      margin: 0 0 28px;
-    }
-
-    .section { margin-bottom: 34px; }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 20px;
-      color: var(--navy);
-      margin: 0 0 18px;
-    }
-
-    .section-title::before {
-      content: "";
-      width: 5px;
-      height: 26px;
-      border-radius: 4px;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
-    .section p {
-      margin-top: 0;
-      font-size: 14px;
-      color: #526176;
-    }
-
-    .job {
-      position: relative;
-      padding: 0 0 24px 21px;
-      margin-left: 5px;
-      border-left: 2px solid var(--line);
-    }
-
-    .job:last-child { padding-bottom: 0; }
-
-    .job::before {
-      content: "";
-      position: absolute;
-      left: -7px;
-      top: 7px;
-      width: 11px;
-      height: 11px;
-      background: var(--gold);
-      border: 2px solid white;
-      border-radius: 50%;
-      box-shadow: 0 0 0 1px var(--gold);
-    }
-
-    .job h3 {
-      color: var(--navy);
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .company {
-      font-weight: 700;
-      color: var(--blue);
-      font-size: 14px;
-      margin: 3px 0 8px;
-    }
-
-    .job p { margin-bottom: 0; }
-
-    .job ul {
-      padding-left: 20px;
-      color: #526176;
-      font-size: 14px;
-      margin: 8px 0 0;
-    }
-
-    .job li { margin: 4px 0; }
-
-    .date {
-      display: inline-block;
-      font-size: 12px;
-      color: #64748b;
-      background: #f1f5f9;
-      border-radius: 5px;
-      padding: 3px 8px;
-      margin: 7px 0;
-    }
-
-    .education-card {
-      padding: 17px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      margin-bottom: 12px;
-    }
-
-    .education-card h3 {
-      margin: 0 0 4px;
-      font-size: 15px;
-      color: var(--navy);
-    }
-
-    .education-card p { margin: 0; }
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .highlight {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 14px;
-      font-size: 13px;
-      color: #526176;
-    }
-
-    .highlight strong {
-      display: block;
-      color: var(--navy);
-      margin-bottom: 5px;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #8490a1;
-      padding: 25px 10px 5px;
-    }
-
-    .lang-en { display: none; }
-
-    body.english .lang-th { display: none !important; }
-    body.english .lang-en { display: block; }
-    body.english span.lang-en,
-    body.english a.lang-en { display: inline; }
-
-    @media (max-width: 760px) {
-      .container { margin: 18px auto; padding: 0 10px; }
-      .resume { grid-template-columns: 1fr; border-radius: 12px; }
-      .sidebar { padding: 28px 24px; }
-      .main-content { padding: 28px 23px; }
-      .avatar { width: 135px; height: 135px; }
-      .profile h1 { font-size: 23px; }
-      .topbar { position: relative; }
-      .highlight-grid { grid-template-columns: 1fr; }
-    }
-
-    @media print {
-      @page { size: A4; margin: 8mm; }
-
-      body { background: white; font-size: 10pt; }
-      .topbar, .footer, .no-print { display: none !important; }
-      .container { margin: 0; padding: 0; max-width: none; }
-      .resume {
-        grid-template-columns: 31% 69%;
-        box-shadow: none;
-        border-radius: 0;
-        overflow: visible;
-      }
-      .sidebar {
-        padding: 20px 15px;
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-      }
-      .main-content { padding: 22px 20px; }
-      .avatar { width: 110px; height: 110px; }
-      .profile h1 { font-size: 19px; }
-      .section { margin-bottom: 22px; }
-      .job { break-inside: avoid; }
-      .education-card, .highlight { break-inside: avoid; }
-      .section-title { font-size: 16px; }
-    }
-  </style>
+<style>
+:root {
+  --navy:#101d35;
+  --blue:#2858a6;
+  --gold:#d9b36b;
+  --bg:#f3f5f9;
+  --text:#263449;
+  --muted:#718096;
+  --line:#e5eaf1;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Tahoma,"Leelawadee UI",Arial,sans-serif;
+  line-height:1.8;
+}
+a {text-decoration:none;color:inherit}
+button {
+  cursor:pointer;
+  border:0;
+  border-radius:8px;
+  padding:10px 15px;
+  font:inherit;
+  font-size:13px;
+}
+nav {
+  background:var(--navy);
+  color:white;
+  padding:13px 5%;
+}
+.nav-inner {
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.logo {font-size:18px;font-weight:bold;letter-spacing:1px}
+.logo span {color:var(--gold)}
+.nav-buttons {display:flex;gap:8px}
+.nav-buttons button {
+  color:white;
+  background:#ffffff18;
+  border:1px solid #ffffff35;
+}
+.hero {
+  background:linear-gradient(135deg,#101d35,#244c7d);
+  color:white;
+  padding:65px 20px;
+}
+.hero-inner {
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 220px;
+  gap:45px;
+  align-items:center;
+}
+.eyebrow {
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:3px;
+  font-weight:bold;
+}
+h1 {
+  font-size:clamp(30px,5vw,46px);
+  line-height:1.4;
+  margin:12px 0;
+}
+.hero h2 {
+  font-size:18px;
+  font-weight:400;
+  color:#d4e1f4;
+  margin:0 0 15px;
+}
+.hero p {color:#d9e4f3;font-size:14px}
+.photo-wrap {
+  width:205px;
+  height:245px;
+  border:3px solid #ffffff40;
+  border-radius:18px;
+  overflow:hidden;
+  background:#ffffff12;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.photo-wrap img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.photo-fallback {padding:15px;font-size:13px;color:white}
+.hero-links {display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}
+.hero-links a {
+  padding:8px 13px;
+  border:1px solid #ffffff45;
+  border-radius:7px;
+  font-size:13px;
+}
+.hero-links a:hover {background:#ffffff15}
+.container {max-width:1000px;margin:30px auto;padding:0 15px}
+.columns {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 290px;
+  gap:22px;
+  align-items:start;
+}
+.card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:26px;
+  margin-bottom:20px;
+  box-shadow:0 5px 20px #14274708;
+}
+.section-title {
+  margin:0 0 18px;
+  font-size:20px;
+  color:var(--navy);
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+.section-title:before {
+  content:"";
+  width:4px;
+  height:25px;
+  background:var(--gold);
+  border-radius:5px;
+}
+p {font-size:14px}
+.summary {color:#566579;margin:0}
+.job {
+  border-left:2px solid var(--line);
+  padding:0 0 24px 20px;
+  margin-left:5px;
+  position:relative;
+}
+.job:last-child {padding-bottom:0}
+.job:before {
+  content:"";
+  position:absolute;
+  left:-7px;
+  top:8px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--gold);
+  border:2px solid white;
+  box-shadow:0 0 0 1px var(--gold);
+}
+.job h3 {margin:0;font-size:16px;color:var(--navy)}
+.company {font-size:14px;color:var(--blue);font-weight:bold}
+.job ul {padding-left:20px;font-size:13px;color:#566579}
+.job li {margin:4px 0}
+.tag-list {display:flex;flex-wrap:wrap;gap:8px}
+.tag {
+  background:#eef3fb;
+  color:#2a4f86;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:12px;
+}
+.info-row {padding:12px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child {border-bottom:0}
+.info-label {display:block;color:var(--muted);font-size:12px}
+.info-value {font-size:14px;overflow-wrap:anywhere}
+.education {
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:15px;
+  font-size:14px;
+}
+footer {text-align:center;color:#8490a0;font-size:12px;padding:25px}
+.en {display:none}
+body.english .th {display:none!important}
+body.english .en {display:initial}
+body.english div.en,body.english p.en,body.english section.en {display:block}
+@media(max-width:720px) {
+  .hero {padding:38px 18px}
+  .hero-inner {grid-template-columns:1fr;gap:22px}
+  .photo-wrap {width:150px;height:175px;grid-row:1}
+  .hero-text {grid-row:2}
+  .columns {grid-template-columns:1fr}
+  .card {padding:21px}
+  .nav-inner {align-items:flex-start}
+  .logo {font-size:15px;padding-top:6px}
+}
+@media print {
+  @page {size:A4;margin:10mm}
+  body {background:white;font-size:10pt}
+  nav,.no-print {display:none!important}
+  .hero {padding:25px;background:#101d35!important;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero-inner {grid-template-columns:1fr 140px;gap:20px}
+  .photo-wrap {width:130px;height:150px}
+  .container {margin:15px auto;padding:0}
+  .columns {grid-template-columns:1fr 230px;gap:12px}
+  .card {padding:15px;box-shadow:none;margin-bottom:12px}
+  .job {break-inside:avoid}
+  footer {padding:10px}
+}
+</style>
 </head>
 
 <body>
-  <header class="topbar no-print">
-    <div class="topbar-inner">
-      <div class="brand">PRO<span>FILE.</span></div>
-      <div class="nav-actions">
-        <button onclick="toggleLanguage()" id="langButton">🇬🇧 English</button>
-        <button onclick="window.print()">🖨️ พิมพ์ / Save PDF</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="resume">
-
-      <aside class="sidebar">
-        <div class="profile">
-          <img
-            class="avatar"
-            src="https://i.postimg.cc/XpcPSLC6/profile.jpg"
-            alt="รูปโปรไฟล์ ธนพรธ์ ลิขิตปัญญาวัฒน์"
-            onerror="this.style.display='none'; document.getElementById('photoNote').style.display='block';"
-          >
-          <p id="photoNote" style="display:none;font-size:12px;color:#d5dfef">
-            กรุณาเปลี่ยน URL เป็นลิงก์รูปภาพโดยตรง
-          </p>
-
-          <div class="rank">
-            <span class="lang-th">ว่าที่ร้อยตรี</span>
-            <span class="lang-en">Acting Sub-Lieutenant</span>
-          </div>
-
-          <h1>
-            <span class="lang-th">ธนพนธ์<br>ลิขิตปัญญาวัฒน์</span>
-            <span class="lang-en">Thanaphon<br>Likhitpanyawat</span>
-          </h1>
-
-          <div class="subtitle">
-            <span class="lang-th">ประวัติส่วนตัวและประวัติการทำงาน</span>
-            <span class="lang-en">Professional Resume & Career Profile</span>
-          </div>
-        </div>
-
-        <section class="side-section">
-          <h2>
-            <span class="lang-th">ข้อมูลติดต่อ</span>
-            <span class="lang-en">CONTACT</span>
-          </h2>
-          <div class="contact-item">
-            <strong>✉ Email</strong>
-            <span class="lang-th">likhitpanyawatthanaphon@gmail.com</span>
-            <span class="lang-en">Add your email address</span>
-          </div>
-          <div class="contact-item">
-            <strong>☎ Phone</strong>
-            <span class="lang-th">กรุณาเพิ่มเบอร์โทรศัพท์</span>
-            <span class="lang-en">Add your phone number</span>
-          </div>
-          <div class="contact-item">
-            <strong>⌖ Location</strong>
-            <span class="lang-th">ประเทศไทย</span>
-            <span class="lang-en">Thailand</span>
-          </div>
-          <div class="contact-item">
-            <strong>🌐 Website</strong>
-            <a href="https://likhitpanyawatthanaphon.github.io/resume/">
-              likhitpanyawatthanaphon.github.io/resume
-            </a>
-          </div>
-        </section>
-
-        <section class="side-section">
-          <h2>
-            <span class="lang-th">ทักษะความสามารถ</span>
-            <span class="lang-en">CORE SKILLS</span>
-          </h2>
-
-          <div class="skill">
-            <div class="skill-label">
-              <span class="lang-th">ความปลอดภัยในการทำงาน</span>
-              <span class="lang-en">Workplace Safety</span>
-            </div>
-            <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-          </div>
-
-          <div class="skill">
-            <div class="skill-label">
-              <span class="lang-th">การควบคุมการผลิต</span>
-              <span class="lang-en">Production Control</span>
-            </div>
-            <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-          </div>
-
-          <div class="skill">
-            <div class="skill-label">
-              <span class="lang-th">การทำงานเป็นทีม</span>
-              <span class="lang-en">Teamwork</span>
-            </div>
-            <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-          </div>
-
-          <div class="skill">
-            <div class="skill-label">
-              <span class="lang-th">การปฏิบัติงานตามขั้นตอน</span>
-              <span class="lang-en">Standard Procedures</span>
-            </div>
-            <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-          </div>
-        </section>
-
-        <section class="side-section">
-          <h2>
-            <span class="lang-th">จุดแข็ง</span>
-            <span class="lang-en">STRENGTHS</span>
-          </h2>
-          <div class="tag-list">
-            <span class="tag lang-th">มีความรับผิดชอบ</span>
-            <span class="tag lang-en">Responsible</span>
-            <span class="tag lang-th">มีวินัย</span>
-            <span class="tag lang-en">Disciplined</span>
-            <span class="tag lang-th">ทำงานเป็นทีม</span>
-            <span class="tag lang-en">Team Player</span>
-            <span class="tag lang-th">ใส่ใจความปลอดภัย</span>
-            <span class="tag lang-en">Safety-minded</span>
-            <span class="tag lang-th">เรียนรู้เร็ว</span>
-            <span class="tag lang-en">Fast Learner</span>
-          </div>
-        </section>
-      </aside>
-
-      <main class="main-content">
-        <section class="section">
-          <h2 class="section-title">
-            <span class="lang-th">แนะนำตัว</span>
-            <span class="lang-en">Professional Summary</span>
-          </h2>
-
-          <p class="lang-th">
-            ผู้มีประสบการณ์การทำงานในองค์กรชั้นนำ ครอบคลุมงานปฏิบัติการ
-            ด้านการซีลรถขนส่งน้ำมัน งานควบคุมสายการผลิต และงานด้านความปลอดภัย
-            ให้ความสำคัญกับระเบียบวินัย มาตรฐานการทำงาน คุณภาพ และความปลอดภัย
-            พร้อมนำประสบการณ์มาพัฒนาการทำงานและสร้างคุณค่าให้กับองค์กร
-          </p>
-
-          <p class="lang-en">
-            A professional with experience across leading organizations,
-            including fuel transportation sealing operations, production
-            line supervision, and occupational safety. Committed to
-            operational standards, quality, teamwork, and workplace safety,
-            with a focus on continuous improvement and organizational value.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">
-            <span class="lang-th">ประสบการณ์ทำงาน</span>
-            <span class="lang-en">Work Experience</span>
-          </h2>
-
-          <article class="job">
-            <h3>
-              <span class="lang-th">พนักงานตีซีลรถน้ำมัน</span>
-              <span class="lang-en">Fuel Truck Sealing Operations</span>
-            </h3>
-            <div class="company">PTTOR</div>
-            <span class="date">
-              <span class="lang-th">ประวัติการทำงาน</span>
-              <span class="lang-en">Professional Experience</span>
-            </span>
-            <ul class="lang-th">
-              <li>ปฏิบัติงานตีซีลรถขนส่งน้ำมันตามขั้นตอนที่กำหนด</li>
-              <li>ตรวจสอบความเรียบร้อยของซีลและความถูกต้องในการปฏิบัติงาน</li>
-              <li>ให้ความสำคัญกับมาตรฐานความปลอดภัยและความรับผิดชอบ</li>
-            </ul>
-            <ul class="lang-en">
-              <li>Performed fuel tanker sealing in accordance with established procedures.</li>
-              <li>Checked seal integrity and operational accuracy.</li>
-              <li>Maintained safety standards and operational responsibility.</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <h3>
-              <span class="lang-th">หัวหน้าควบคุมไลน์การผลิต</span>
-              <span class="lang-en">Production Line Supervisor</span>
-            </h3>
-            <div class="company">CPF</div>
-            <span class="date">
-              <span class="lang-th">ประวัติการทำงาน</span>
-              <span class="lang-en">Professional Experience</span>
-            </span>
-            <ul class="lang-th">
-              <li>ควบคุมและติดตามการทำงานของสายการผลิต</li>
-              <li>ประสานงานกับทีมเพื่อให้การผลิตเป็นไปตามแผน</li>
-              <li>ให้ความสำคัญกับคุณภาพสินค้าและความปลอดภัยในการทำงาน</li>
-            </ul>
-            <ul class="lang-en">
-              <li>Monitored and coordinated daily production line operations.</li>
-              <li>Worked with team members to support production targets.</li>
-              <li>Focused on product quality and workplace safety.</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <h3>
-              <span class="lang-th">เจ้าหน้าที่ความปลอดภัยในการทำงาน (จป.)</span>
-              <span class="lang-en">Occupational Safety Officer</span>
-            </h3>
-            <div class="company">SCG</div>
-            <span class="date">
-              <span class="lang-th">ประวัติการทำงาน</span>
-              <span class="lang-en">Professional Experience</span>
-            </span>
-            <ul class="lang-th">
-              <li>สนับสนุนการปฏิบัติงานให้สอดคล้องกับมาตรฐานความปลอดภัย</li>
-              <li>ส่งเสริมการตระหนักรู้ด้านความปลอดภัยในสถานที่ทำงาน</li>
-              <li>ประสานงานและติดตามการปฏิบัติงานตามข้อกำหนด</li>
-            </ul>
-            <ul class="lang-en">
-              <li>Supported compliance with workplace safety standards.</li>
-              <li>Promoted safety awareness across work areas.</li>
-              <li>Coordinated and monitored compliance with safety requirements.</li>
-            </ul>
-          </article>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">
-            <span class="lang-th">การศึกษา</span>
-            <span class="lang-en">Education</span>
-          </h2>
-          <div class="education-card">
-            <h3>
-              <span class="lang-th">ประวัติการศึกษา</span>
-              <span class="lang-en">Educational Background</span>
-            </h3>
-            <p class="lang-th">
-              กรุณาเพิ่มชื่อวุฒิการศึกษา สถานศึกษา และปีที่สำเร็จการศึกษา
-            </p>
-            <p class="lang-en">
-              Please add your qualification, institution, and graduation year.
-            </p>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">
-            <span class="lang-th">ความสามารถและคุณค่า</span>
-            <span class="lang-en">Professional Value</span>
-          </h2>
-          <div class="highlight-grid">
-            <div class="highlight">
-              <strong>
-                <span class="lang-th">การปฏิบัติงาน</span>
-                <span class="lang-en">Operations</span>
-              </strong>
-              <span class="lang-th">มีประสบการณ์ด้านงานปฏิบัติการและการควบคุมงาน</span>
-              <span class="lang-en">Experience in operations and work coordination.</span>
-            </div>
-            <div class="highlight">
-              <strong>
-                <span class="lang-th">ความปลอดภัย</span>
-                <span class="lang-en">Safety</span>
-              </strong>
-              <span class="lang-th">มุ่งเน้นการทำงานตามมาตรฐานและลดความเสี่ยง</span>
-              <span class="lang-en">Focused on safety standards and risk reduction.</span>
-            </div>
-            <div class="highlight">
-              <strong>
-                <span class="lang-th">การทำงานร่วมกัน</span>
-                <span class="lang-en">Collaboration</span>
-              </strong>
-              <span class="lang-th">พร้อมประสานงานและทำงานร่วมกับทีม</span>
-              <span class="lang-en">Able to coordinate and collaborate with teams.</span>
-            </div>
-            <div class="highlight">
-              <strong>
-                <span class="lang-th">การพัฒนา</span>
-                <span class="lang-en">Continuous Improvement</span>
-              </strong>
-              <span class="lang-th">พร้อมเรียนรู้และปรับปรุงกระบวนการทำงาน</span>
-              <span class="lang-en">Committed to learning and process improvement.</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">
-            <span class="lang-th">เป้าหมายในการทำงาน</span>
-            <span class="lang-en">Career Objective</span>
-          </h2>
-          <p class="lang-th">
-            มุ่งหวังที่จะนำความรู้และประสบการณ์จากการทำงานในองค์กรชั้นนำ
-            มาต่อยอดเพื่อเพิ่มประสิทธิภาพในการทำงาน สนับสนุนเป้าหมายขององค์กร
-            และเติบโตในสายอาชีพอย่างมั่นคง
-          </p>
-          <p class="lang-en">
-            Seeking to apply experience gained from leading organizations
-            to improve operational efficiency, support business objectives,
-            and build a long-term professional career.
-          </p>
-        </section>
-      </main>
-    </div>
-
-    <div class="footer">
-      © <span id="year"></span>
-      <span class="lang-th">ธนพรธ์ ลิขิตปัญญาวัฒน์ | ประวัติส่วนตัวและประวัติการทำงาน</span>
-      <span class="lang-en">Thanaphon Likhitpanyawat | Professional Resume</span>
+<nav class="no-print">
+  <div class="nav-inner">
+    <div class="logo">THANAPHON<span>.</span> RESUME</div>
+    <div class="nav-buttons">
+      <button onclick="toggleLanguage()" id="languageButton">🇬🇧 English</button>
+      <button onclick="window.print()">Print / PDF</button>
     </div>
   </div>
+</nav>
 
-  <script>
-    let isEnglish = false;
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">PROFESSIONAL PORTFOLIO</div>
+      <h1>
+        <span class="th">ว่าที่ร้อยตรี ธนพรธ์<br>ลิขิตปัญญาวัฒน์</span>
+        <span class="en">Thanaphon<br>Likhitpanyawat</span>
+      </h1>
+      <h2>
+        <span class="th">ประวัติส่วนตัวและประสบการณ์ทำงาน</span>
+        <span class="en">Resume & Professional Experience</span>
+      </h2>
+      <p>
+        <span class="th">ประสบการณ์ด้านปฏิบัติการ ควบคุมสายการผลิต และความปลอดภัยในการทำงาน พร้อมเรียนรู้และพัฒนาตนเองอย่างต่อเนื่อง</span>
+        <span class="en">Experienced in operations, production line supervision, and occupational safety. Committed to teamwork, quality, and continuous improvement.</span>
+      </p>
+      <div class="hero-links">
+        <a href="#experience"><span class="th">ประสบการณ์ทำงาน</span><span class="en">Experience</span></a>
+        <a href="#skills"><span class="th">ทักษะ</span><span class="en">Skills</span></a>
+        <a href="#contact"><span class="th">ติดต่อ</span><span class="en">Contact</span></a>
+      </div>
+    </div>
 
-    function toggleLanguage() {
-      isEnglish = !isEnglish;
-      document.body.classList.toggle("english", isEnglish);
-      document.documentElement.lang = isEnglish ? "en" : "th";
-      document.getElementById("langButton").textContent =
-        isEnglish ? "🇹🇭 ภาษาไทย" : "🇬🇧 English";
-    }
+    <div class="photo-wrap">
+      <!-- เปลี่ยน IMAGE_DIRECT_URL เป็น Direct Link ของรูปจาก Postimages -->
+      <img src="IMAGE_DIRECT_URL"
+           alt="Thanaphon Likhitpanyawat"
+           onerror="this.style.display='none';document.getElementById('photoFallback').style.display='block'">
+      <div id="photoFallback" class="photo-fallback" style="display:none">
+        <span class="th">ใส่ลิงก์รูปภาพโดยตรงจาก Postimages</span>
+        <span class="en">Add your direct image URL</span>
+        <br><a href="https://postimg.cc/XpcPSLC6" target="_blank" rel="noopener">เปิดรูปโปรไฟล์</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+<main class="container">
+  <div class="columns">
+    <div>
+      <section class="card">
+        <h2 class="section-title">
+          <span class="th">แนะนำตัว</span>
+          <span class="en">Professional Summary</span>
+        </h2>
+        <p class="summary th">
+          ผู้มีประสบการณ์ทำงานในองค์กรชั้นนำ ครอบคลุมงานปฏิบัติการด้านรถขนส่งน้ำมัน
+          การควบคุมสายการผลิต และงานด้านความปลอดภัยในการทำงาน
+          ให้ความสำคัญกับคุณภาพ วินัย ความรับผิดชอบ และมาตรฐานการปฏิบัติงาน
+        </p>
+        <p class="summary en">
+          A professional with experience in fuel transportation operations,
+          production line supervision, and occupational safety.
+          Focused on quality, accountability, operational standards, and teamwork.
+        </p>
+      </section>
+
+      <section class="card" id="experience">
+        <h2 class="section-title">
+          <span class="th">ประสบการณ์ทำงาน</span>
+          <span class="en">Work Experience</span>
+        </h2>
+
+        <article class="job">
+          <h3>
+            <span class="th">พนักงานตีซีลรถน้ำมัน</span>
+            <span class="en">Fuel Truck Sealing Operations</span>
+          </h3>
+          <div class="company">PTTOR</div>
+          <ul class="th">
+            <li>ปฏิบัติงานตีซีลรถขนส่งน้ำมันตามขั้นตอนที่กำหนด</li>
+            <li>ตรวจสอบความเรียบร้อยและความถูกต้องของการปฏิบัติงาน</li>
+            <li>ให้ความสำคัญกับระเบียบวินัยและมาตรฐานความปลอดภัย</li>
+          </ul>
+          <ul class="en">
+            <li>Performed fuel tanker sealing according to established procedures.</li>
+            <li>Checked operational accuracy and seal integrity.</li>
+            <li>Followed workplace safety standards and procedures.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>
+            <span class="th">หัวหน้าควบคุมไลน์การผลิต</span>
+            <span class="en">Production Line Supervisor</span>
+          </h3>
+          <div class="company">CPF</div>
+          <ul class="th">
+            <li>ควบคุมและติดตามการทำงานของสายการผลิต</li>
+            <li>ประสานงานกับทีมเพื่อสนับสนุนแผนการผลิต</li>
+            <li>ใส่ใจคุณภาพสินค้าและความปลอดภัยในการทำงาน</li>
+          </ul>
+          <ul class="en">
+            <li>Monitored and coordinated production line operations.</li>
+            <li>Worked with team members to support production plans.</li>
+            <li>Focused on product quality and workplace safety.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>
+            <span class="th">เจ้าหน้าที่ความปลอดภัยในการทำงาน (จป.)</span>
+            <span class="en">Occupational Safety Officer</span>
+          </h3>
+          <div class="company">SCG</div>
+          <ul class="th">
+            <li>สนับสนุนการปฏิบัติงานตามมาตรฐานความปลอดภัย</li>
+            <li>ส่งเสริมการตระหนักรู้เรื่องความปลอดภัยในสถานที่ทำงาน</li>
+            <li>ติดตามการปฏิบัติงานตามข้อกำหนดด้านความปลอดภัย</li>
+          </ul>
+          <ul class="en">
+            <li>Supported compliance with occupational safety standards.</li>
+            <li>Promoted workplace safety awareness.</li>
+            <li>Monitored safety procedures and compliance.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">
+          <span class="th">การศึกษา</span>
+          <span class="en">Education</span>
+        </h2>
+        <div class="education">
+          <span class="th">กรุณาเพิ่มวุฒิการศึกษา สถานศึกษา และปีที่สำเร็จการศึกษา</span>
+          <span class="en">Please add your qualification, institution, and graduation year.</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">
+          <span class="th">เป้าหมายในการทำงาน</span>
+          <span class="en">Career Objective</span>
+        </h2>
+        <p class="th">
+          มุ่งมั่นนำประสบการณ์มาสนับสนุนเป้าหมายขององค์กร
+          พัฒนาคุณภาพการทำงาน และเติบโตในสายอาชีพอย่างมั่นคง
+        </p>
+        <p class="en">
+          To apply professional experience toward organizational goals,
+          improve work quality, and develop a long-term career.
+        </p>
+      </section>
+    </div>
+
+    <aside>
+      <section class="card" id="contact">
+        <h2 class="section-title">
+          <span class="th">ข้อมูลติดต่อ</span>
+          <span class="en">Contact</span>
+        </h2>
+        <div class="info-row">
+          <span class="info-label">Name</span>
+          <div class="info-value">Thanaphon Likhitpanyawat</div>
+        </div>
+        <div class="info-row">
+          <span class="info-label">
+            <span class="th">ตำแหน่งที่สนใจ</span>
+            <span class="en">Career Interests</span>
+          </span>
+          <div class="info-value">
+            <span class="th">งานปฏิบัติการ / ควบคุมการผลิต / ความปลอดภัย</span>
+            <span class="en">Operations / Production / Safety</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Location</span>
+          <div class="info-value">
+            <span class="th">ประเทศไทย</span>
+            <span class="en">Thailand</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email</span>
+          <div class="info-value">เพิ่มอีเมลของคุณ</div>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Phone</span>
+          <div class="info-value">เพิ่มเบอร์โทรศัพท์ของคุณ</div>
+        </div>
+      </section>
+
+      <section class="card" id="skills">
+        <h2 class="section-title">
+          <span class="th">ทักษะความสามารถ</span>
+          <span class="en">Skills</span>
+        </h2>
+        <div class="tag-list">
+          <span class="tag th">ความปลอดภัย</span>
+          <span class="tag en">Workplace Safety</span>
+          <span class="tag th">ควบคุมการผลิต</span>
+          <span class="tag en">Production Control</span>
+          <span class="tag th">ประสานงาน</span>
+          <span class="tag en">Coordination</span>
+          <span class="tag th">ทำงานเป็นทีม</span>
+          <span class="tag en">Teamwork</span>
+          <span class="tag th">ตรวจสอบคุณภาพ</span>
+          <span class="tag en">Quality Awareness</span>
+          <span class="tag th">แก้ไขปัญหา</span>
+          <span class="tag en">Problem Solving</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">
+          <span class="th">จุดแข็ง</span>
+          <span class="en">Strengths</span>
+        </h2>
+        <p class="th">มีความรับผิดชอบ • มีวินัย • เรียนรู้เร็ว • ใส่ใจความปลอดภัย</p>
+        <p class="en">Responsible • Disciplined • Fast learner • Safety-minded</p>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Thanaphon Likhitpanyawat
+  <br>
+  <span class="th">เว็บไซต์เรซูเม่ส่วนตัว</span>
+  <span class="en">Professional Resume Portfolio</span>
+</footer>
+
+<script>
+let english = false;
+
+function toggleLanguage() {
+  english = !english;
+  document.body.classList.toggle("english", english);
+  document.documentElement.lang = english ? "en" : "th";
+  document.getElementById("languageButton").textContent =
+    english ? "🇹🇭 ภาษาไทย" : "🇬🇧 English";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
