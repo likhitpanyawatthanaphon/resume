@@ -1,1 +1,804 @@
 
+/* =========================================
+   RESUME WEBSITE - STYLE.CSS
+   Theme: Navy Blue / Gold / White
+   Responsive: Desktop, Tablet and Mobile
+   ========================================= */
+
+/* ---------- 1. ตัวแปรสี ---------- */
+:root {
+  --navy: #10243e;
+  --navy-dark: #09172a;
+  --navy-light: #203d60;
+  --gold: #d7b778;
+  --gold-light: #f0dfb5;
+
+  --text: #243247;
+  --muted: #65748a;
+  --white: #ffffff;
+  --border: #e1e7ef;
+  --surface: rgba(255, 255, 255, 0.94);
+
+  --shadow:
+    0 12px 35px rgba(16, 36, 62, 0.09);
+
+  --radius: 18px;
+  --container: 1120px;
+}
+
+/* ---------- 2. รีเซ็ตพื้นฐาน ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Kanit",
+    "Inter",
+    "Noto Sans Thai",
+    sans-serif;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(215, 183, 120, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #edf1f6 0%,
+      #f8f9fb 45%,
+      #e9eef5 100%
+    );
+
+  line-height: 1.8;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: var(--navy-dark);
+  background: var(--gold-light);
+}
+
+/* ---------- 3. พื้นที่เนื้อหาหลัก ---------- */
+.container,
+.wrapper,
+main {
+  width: min(
+    calc(100% - 40px),
+    var(--container)
+  );
+  margin-inline: auto;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+/* ---------- 4. แถบนำทาง ---------- */
+header,
+.site-header,
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  color: var(--white);
+
+  background: rgba(9, 23, 42, 0.96);
+  border-bottom: 1px solid rgba(215, 183, 120, 0.25);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+nav,
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  gap: 20px;
+}
+
+nav a,
+.navbar a {
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+nav a:hover,
+.navbar a:hover {
+  color: var(--gold);
+}
+
+.nav-menu,
+.nav-links,
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.menu-toggle,
+.nav-toggle {
+  display: none;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+/* ---------- 5. ส่วน Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(215, 183, 120, 0.23),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      var(--navy-dark),
+      var(--navy) 60%,
+      var(--navy-light)
+    );
+
+  padding: 76px 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  bottom: -180px;
+
+  border: 1px solid rgba(215, 183, 120, 0.3);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.hero h2,
+.hero .subtitle {
+  color: var(--gold-light);
+  font-weight: 400;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero .container,
+.hero .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- 6. รูปโปรไฟล์ ---------- */
+.profile-image,
+.profile-photo,
+.avatar {
+  width: 180px;
+  height: 180px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+
+  background: #e8edf4;
+
+  box-shadow:
+    0 0 0 8px rgba(215, 183, 120, 0.12),
+    0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.profile-placeholder {
+  display: grid;
+  place-items: center;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+
+  color: var(--gold-light);
+  background: var(--navy-light);
+
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ---------- 7. หัวข้อแต่ละส่วน ---------- */
+section {
+  padding-block: 64px;
+}
+
+section h2,
+.section-title {
+  position: relative;
+
+  margin: 0 0 28px;
+
+  color: var(--navy);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.4;
+}
+
+section h2::after,
+.section-title::after {
+  content: "";
+  display: block;
+
+  width: 58px;
+  height: 4px;
+
+  margin-top: 12px;
+
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    var(--gold-light)
+  );
+
+  border-radius: 10px;
+}
+
+/* ---------- 8. กล่องข้อมูลและการ์ด ---------- */
+.card,
+.resume-card,
+.experience-card,
+.skill-card,
+.education-card {
+  padding: 26px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover,
+.resume-card:hover,
+.experience-card:hover,
+.skill-card:hover,
+.education-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(215, 183, 120, 0.8);
+
+  box-shadow:
+    0 18px 40px rgba(16, 36, 62, 0.13);
+}
+
+/* ---------- 9. ตาราง Grid ---------- */
+.grid,
+.cards-grid,
+.skills-grid,
+.experience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.grid-3,
+.cards-grid-3 {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* ---------- 10. ประสบการณ์ทำงาน ---------- */
+.experience-item {
+  position: relative;
+
+  padding: 0 0 30px 24px;
+
+  border-left: 2px solid var(--border);
+}
+
+.experience-item::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: -7px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+  border: 2px solid var(--white);
+
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.experience-item h3,
+.experience-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  color: var(--navy);
+  font-size: 1.2rem;
+}
+
+.company,
+.job-title {
+  color: var(--navy-light);
+  font-weight: 600;
+}
+
+.date,
+.period,
+.muted {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+/* ---------- 11. ทักษะ ---------- */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li,
+.skill-tag,
+.tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 14px;
+
+  color: var(--navy);
+  background: #edf2f8;
+
+  border: 1px solid #dbe4ef;
+  border-radius: 999px;
+
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.skill-list li:hover,
+.skill-tag:hover,
+.tag:hover {
+  color: var(--navy-dark);
+  background: var(--gold-light);
+  border-color: var(--gold);
+}
+
+/* ---------- 12. ปุ่ม ---------- */
+.btn,
+.button,
+button.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 11px 22px;
+
+  color: var(--white);
+  background: var(--navy);
+
+  border: 1px solid var(--navy);
+  border-radius: 10px;
+
+  font-weight: 600;
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.button:hover,
+button.primary:hover {
+  transform: translateY(-2px);
+
+  background: var(--navy-light);
+
+  box-shadow:
+    0 8px 20px rgba(16, 36, 62, 0.18);
+}
+
+.btn-gold,
+.button-gold {
+  color: var(--navy-dark);
+
+  background: linear-gradient(
+    135deg,
+    var(--gold-light),
+    var(--gold)
+  );
+
+  border-color: var(--gold);
+}
+
+.btn-gold:hover,
+.button-gold:hover {
+  color: var(--navy-dark);
+  background: var(--gold-light);
+}
+
+.btn-outline,
+.button-outline {
+  color: var(--navy);
+  background: transparent;
+  border-color: var(--navy);
+}
+
+.btn-outline:hover,
+.button-outline:hover {
+  color: var(--white);
+  background: var(--navy);
+}
+
+/* ---------- 13. ภาษาไทย / อังกฤษ ---------- */
+.language-switch,
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-switch button,
+.lang-switch button {
+  padding: 7px 12px;
+
+  color: var(--white);
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+}
+
+.language-switch button.active,
+.lang-switch button.active {
+  color: var(--navy-dark);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ---------- 14. ข้อมูลติดต่อ ---------- */
+.contact-list {
+  display: grid;
+  gap: 14px;
+
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list a {
+  color: var(--navy-light);
+  overflow-wrap: anywhere;
+}
+
+.contact-list a:hover {
+  color: #9b742d;
+  text-decoration: underline;
+}
+
+/* ---------- 15. ส่วนท้าย ---------- */
+footer,
+.site-footer {
+  padding: 28px 20px;
+
+  color: rgba(255, 255, 255, 0.8);
+  background: var(--navy-dark);
+
+  border-top: 3px solid var(--gold);
+
+  text-align: center;
+}
+
+footer a,
+.site-footer a {
+  color: var(--gold-light);
+}
+
+footer p,
+.site-footer p {
+  margin: 6px 0;
+}
+
+/* ---------- 16. เอฟเฟกต์ ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- 17. แท็บเล็ต ---------- */
+@media (max-width: 900px) {
+  .grid-3,
+  .cards-grid-3 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  section {
+    padding-block: 52px;
+  }
+
+  .nav-menu,
+  .nav-links,
+  .navbar-menu {
+    gap: 14px;
+  }
+}
+
+/* ---------- 18. โทรศัพท์ ---------- */
+@media (max-width: 640px) {
+  .container,
+  .wrapper,
+  main {
+    width: min(
+      calc(100% - 28px),
+      var(--container)
+    );
+  }
+
+  .hero {
+    padding: 46px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding-block: 42px;
+  }
+
+  .grid,
+  .cards-grid,
+  .skills-grid,
+  .experience-grid,
+  .grid-3,
+  .cards-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .resume-card,
+  .experience-card,
+  .skill-card,
+  .education-card {
+    padding: 20px;
+  }
+
+  .profile-image,
+  .profile-photo,
+  .avatar,
+  .profile-placeholder {
+    width: 140px;
+    height: 140px;
+  }
+
+  .menu-toggle,
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu,
+  .nav-links,
+  .navbar-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 12px 20px 20px;
+
+    background: var(--navy-dark);
+    border-bottom: 1px solid rgba(215, 183, 120, 0.3);
+  }
+
+  .nav-menu.active,
+  .nav-links.active,
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a,
+  .nav-links a,
+  .navbar-menu a {
+    display: block;
+    padding: 10px 4px;
+  }
+
+  .language-switch,
+  .lang-switch {
+    flex-wrap: wrap;
+  }
+
+  .btn,
+  .button {
+    max-width: 100%;
+  }
+}
+
+/* ---------- 19. พิมพ์ / บันทึกเป็น PDF ---------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    color: #222 !important;
+    background: #fff !important;
+    font-size: 10pt;
+  }
+
+  body {
+    min-height: auto;
+  }
+
+  header,
+  nav,
+  .navbar,
+  .site-header,
+  .menu-toggle,
+  .nav-toggle,
+  .language-switch,
+  .lang-switch,
+  .no-print,
+  .print-button,
+  button {
+    display: none !important;
+  }
+
+  .container,
+  .wrapper,
+  main {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hero {
+    padding: 20px;
+    background: var(--navy) !important;
+    break-inside: avoid;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero p {
+    color: #fff !important;
+  }
+
+  section {
+    padding: 18px 0;
+  }
+
+  .card,
+  .resume-card,
+  .experience-card,
+  .skill-card,
+  .education-card,
+  .experience-item {
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  footer,
+  .site-footer {
+    color: #222 !important;
+    background: #fff !important;
+    border-top: 1px solid #ccc;
+  }
+}
